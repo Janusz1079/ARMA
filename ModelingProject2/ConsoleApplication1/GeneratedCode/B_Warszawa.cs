@@ -16,7 +16,7 @@ public class B_Warszawa : Baza
     {
         Nazwa_Bazy = "Warszawa";
         Lista_Rozkazow.Add(1);
-        Lista_Rozkazow.Add(2);
+        Lista_Rozkazow.Add(2); //komentarz
     }
 }
 
