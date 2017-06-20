@@ -46,8 +46,9 @@ public class R_Produkuj : Abstrakcyjny_Rozkaz
 
     }
 
-    public virtual void Ustaw_Parametry_Rozkazu(string DocelowaBaza, Action<Abstrakcyjny_Rozkaz> CentralaZlecWykonanieRozkazu, Func<string, Abstrakcyjny_Rozkaz> CentralaWytworzRozkaz)
+    public virtual void Ustaw_Parametry_Rozkazu(string ParametryProduktu, string DocelowaBaza, Action<Abstrakcyjny_Rozkaz> CentralaZlecWykonanieRozkazu, Func<string, Abstrakcyjny_Rozkaz> CentralaWytworzRozkaz)
     {
+        this.ParametryProduktu = ParametryProduktu;
         this.CentralaWytworzRozkaz = CentralaWytworzRozkaz;
         this.CentralaZlecWykonanieRozkazu = CentralaZlecWykonanieRozkazu;
         this.DocelowaBaza = DocelowaBaza;

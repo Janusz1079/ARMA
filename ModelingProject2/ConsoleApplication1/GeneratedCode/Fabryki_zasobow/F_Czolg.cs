@@ -19,18 +19,26 @@ public class F_Czolg : Fabryka
             {
                 R_Produkuj RozkazProdukcji = (R_Produkuj)rozkaz;
 
-                Zasob_wojskowy Wyprodukowany = this.ProdukujCzolg(RozkazProdukcji.ParametryProduktu);
-                Abstrakcyjny_Rozkaz RozkazDodania = RozkazProdukcji.CentralaWytworzRozkaz("dodajzasob");
-                R_DodajZasobWojskowy RozkazDodaniaZrzutowany = (R_DodajZasobWojskowy)RozkazDodania;
-                RozkazDodaniaZrzutowany.Dolacz_Zasob(RozkazProdukcji.DocelowaBaza, Wyprodukowany);
+                string[] x = RozkazProdukcji.ParametryProduktu.Split('|');
 
-                RozkazProdukcji.CentralaZlecWykonanieRozkazu((Abstrakcyjny_Rozkaz)RozkazDodaniaZrzutowany);
+                if (RozkazProdukcji.ParametryProduktu.Split('|')[0] == "czolg") // Rozkaz produkcji czolgu
+                {
+                    Zasob_wojskowy Wyprodukowany = this.ProdukujCzolg(RozkazProdukcji.ParametryProduktu);
+                    Abstrakcyjny_Rozkaz RozkazDodania = RozkazProdukcji.CentralaWytworzRozkaz("dodajzasob");
+                    R_DodajZasobWojskowy RozkazDodaniaZrzutowany = (R_DodajZasobWojskowy)RozkazDodania;
+                    RozkazDodaniaZrzutowany.Dolacz_Zasob(RozkazProdukcji.DocelowaBaza, Wyprodukowany);
+                    RozkazProdukcji.CentralaZlecWykonanieRozkazu((Abstrakcyjny_Rozkaz)RozkazDodaniaZrzutowany);
+                }
+                else
+                {
+                    this.NastepnikWykonaj(rozkaz);
+                }
             }
             
         }
         else
         {
-            nastepnik.Wykonaj(rozkaz);
+            this.NastepnikWykonaj(rozkaz);
         }
     }
 

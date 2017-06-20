@@ -38,6 +38,14 @@ public class Abstrakcyjna_Jednostka
 		throw new System.NotImplementedException();
 	}
 
+    public virtual void NastepnikWykonaj(Abstrakcyjny_Rozkaz rozkaz)
+    {
+        if (nastepnik != null)
+        {
+            nastepnik.Wykonaj(rozkaz);
+        }
+    }
+
     public Abstrakcyjna_Jednostka()
     {
         Lista_Rozkazow = new List<int>();

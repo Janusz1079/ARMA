@@ -11,5 +11,9 @@ using System.Text;
 
 public class Czolg : Zasob_wojskowy
 {
+    public Czolg()
+    {
+        Nazwa = "Czolg";
+    }
 }
 

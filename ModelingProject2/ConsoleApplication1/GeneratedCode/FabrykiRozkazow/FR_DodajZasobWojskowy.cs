@@ -13,7 +13,10 @@ public class FR_DodajZasobWojskowy : Abstrakcyjna_Fabryka_Rozkazow
 {
 	public override Abstrakcyjny_Rozkaz TworzRozkaz(string parametr, Centrala info)
 	{
-		throw new System.NotImplementedException();
+        R_DodajZasobWojskowy rozkaz = new R_DodajZasobWojskowy();
+        rozkaz.UstawCallback(info.Odczytaj_Raport);
+
+        return rozkaz;
 	}
 
 	public FR_DodajZasobWojskowy()

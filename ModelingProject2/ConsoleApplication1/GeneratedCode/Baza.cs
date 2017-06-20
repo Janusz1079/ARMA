@@ -32,16 +32,17 @@ public class Baza : Abstrakcyjna_Jednostka
                 if(RozkazZrzutowany.DocelowaBaza == Nazwa_Bazy)
                 {
                     ListaZasobow.Add(RozkazZrzutowany.Zasob_Do_Dodania);
+                    rozkaz.Raportuj(String.Format("{0} dodano {1}", Nazwa_Bazy, RozkazZrzutowany.Zasob_Do_Dodania.Nazwa));
                 }
                 else
                 {
-                    nastepnik.Wykonaj(rozkaz);
+                    this.NastepnikWykonaj(rozkaz);
                 }
             }
         }
         else
         {
-            nastepnik.Wykonaj(rozkaz);
+            this.NastepnikWykonaj(rozkaz);
         }
     }
 

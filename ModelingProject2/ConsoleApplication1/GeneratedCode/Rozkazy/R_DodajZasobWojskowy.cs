@@ -23,10 +23,6 @@ public class R_DodajZasobWojskowy : Abstrakcyjny_Rozkaz
         set;
     }
 
-    public override void Raportuj(string rezultat)
-	{
-		throw new System.NotImplementedException();
-	}
 
 	public R_DodajZasobWojskowy()
 	{
@@ -37,6 +33,11 @@ public class R_DodajZasobWojskowy : Abstrakcyjny_Rozkaz
     {
         this.Zasob_Do_Dodania = Zasob_Do_Dodania;
         this.DocelowaBaza = DocelowaBaza;
+    }
+
+    public virtual void UstawCallback(Action<string> Callback)
+    {
+        this.Callback = Callback;
     }
 }
 

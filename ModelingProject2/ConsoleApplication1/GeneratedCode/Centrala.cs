@@ -48,10 +48,10 @@ public class Centrala
 
         this.Dodaj(new B_Warszawa());
         this.Dodaj(new B_Wroclaw());
-        this.Dodaj(new F_Karabin());
+ //       this.Dodaj(new F_Karabin());
         this.Dodaj(new F_Czolg());
-        this.Dodaj(new P_Czolgista());
-        this.Dodaj(new P_Zolniez());
+ //       this.Dodaj(new P_Czolgista());
+ //       this.Dodaj(new P_Zolniez());
     }
 
     public virtual void Odczytaj_Raport(string Raport)

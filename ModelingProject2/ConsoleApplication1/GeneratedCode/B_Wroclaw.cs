@@ -13,6 +13,8 @@ public class B_Wroclaw : Baza
 {
     public B_Wroclaw()
     {
+        ListaZasobow = new List<Zasob_wojskowy>();
+
         Nazwa_Bazy = "Wroclaw";
         Lista_Rozkazow.Add(1); //Rozkaz Cwiczenia
         Lista_Rozkazow.Add(2); //Razkaz Dodaj Zasob Wojskowy 

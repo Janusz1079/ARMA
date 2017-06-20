@@ -25,7 +25,7 @@ public class Abstrakcyjny_Rozkaz
 
 	public virtual void Raportuj(string rezultat)
 	{
-		throw new System.NotImplementedException();
+        Callback(rezultat);
 	}
 
 }
