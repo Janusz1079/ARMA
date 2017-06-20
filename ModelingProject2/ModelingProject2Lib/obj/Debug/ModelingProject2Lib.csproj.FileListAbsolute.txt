@@ -1,0 +1,5 @@
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ModelingProject2Lib\bin\Debug\ModelingProject2Lib.dll
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ModelingProject2Lib\bin\Debug\ModelingProject2Lib.pdb
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ModelingProject2Lib\obj\Debug\ModelingProject2Lib.csprojResolveAssemblyReference.cache
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ModelingProject2Lib\obj\Debug\ModelingProject2Lib.dll
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ModelingProject2Lib\obj\Debug\ModelingProject2Lib.pdb

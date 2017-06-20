@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64BE3FDE-5C39-4CA0-859D-701DDBF7B5FC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeneratedCode\Abstrakcyjna_Fabryka_Rozkazow.cs" />
+    <Compile Include="GeneratedCode\Abstrakcyjna_Jednostka.cs" />
+    <Compile Include="GeneratedCode\Abstrakcyjny_Rozkaz.cs" />
+    <Compile Include="GeneratedCode\Baza.cs" />
+    <Compile Include="GeneratedCode\B_Warszawa.cs" />
+    <Compile Include="GeneratedCode\B_Wroclaw.cs" />
+    <Compile Include="GeneratedCode\Centrala.cs" />
+    <Compile Include="GeneratedCode\FabrykiRozkazow\FR_Cwiczenia.cs" />
+    <Compile Include="GeneratedCode\FabrykiRozkazow\FR_DodajZasobWojskowy.cs" />
+    <Compile Include="GeneratedCode\FabrykiRozkazow\FR_Mobilizacja.cs" />
+    <Compile Include="GeneratedCode\FabrykiRozkazow\FR_Produkuj.cs" />
+    <Compile Include="GeneratedCode\Rozkazy\R_Cwiczenia.cs" />
+    <Compile Include="GeneratedCode\Rozkazy\R_DodajZasobWojskowy.cs" />
+    <Compile Include="GeneratedCode\Rozkazy\R_Mobilizacja.cs" />
+    <Compile Include="GeneratedCode\Rozkazy\R_Produkuj.cs" />
+    <Compile Include="GeneratedCode\Zasoby_wojskowe\Czolg.cs" />
+    <Compile Include="GeneratedCode\Zasoby_wojskowe\Czolgista.cs" />
+    <Compile Include="GeneratedCode\Fabryka.cs" />
+    <Compile Include="GeneratedCode\Fabryki_zasobow\F_Czolg.cs" />
+    <Compile Include="GeneratedCode\Fabryki_zasobow\F_Karabin.cs" />
+    <Compile Include="GeneratedCode\Zasoby_wojskowe\Karabin.cs" />
+    <Compile Include="GeneratedCode\Poligon.cs" />
+    <Compile Include="GeneratedCode\Fabryki_zasobow\P_Czolgista.cs" />
+    <Compile Include="GeneratedCode\Fabryki_zasobow\P_Zolniez.cs" />
+    <Compile Include="GeneratedCode\Zasob_wojskowy.cs" />
+    <Compile Include="GeneratedCode\Zasoby_wojskowe\Zolniez.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

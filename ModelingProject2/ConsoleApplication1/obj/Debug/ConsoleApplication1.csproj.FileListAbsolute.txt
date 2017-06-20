@@ -1,0 +1,6 @@
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\TechMaster\Documents\Visual Studio 2015\Projects\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
