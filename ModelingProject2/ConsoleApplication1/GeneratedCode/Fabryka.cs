@@ -14,7 +14,7 @@ public class Fabryka : Abstrakcyjna_Jednostka
     public Fabryka()
     {
         Lista_Rozkazow = new List<int>();
-        Lista_Rozkazow.Add(4);
+        Lista_Rozkazow.Add(4); // Rozkaz Produkuj
     }
 }
 

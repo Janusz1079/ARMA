@@ -15,8 +15,8 @@ public class B_Warszawa : Baza
     public B_Warszawa()
     {
         Nazwa_Bazy = "Warszawa";
-        Lista_Rozkazow.Add(1); //komentarz
-        Lista_Rozkazow.Add(2); //komentarz
+        Lista_Rozkazow.Add(1); //Rozkaz Cwiczenia
+        Lista_Rozkazow.Add(2); //Razkaz Dodaj Zasob Wojskowy 
     }
 }
 
