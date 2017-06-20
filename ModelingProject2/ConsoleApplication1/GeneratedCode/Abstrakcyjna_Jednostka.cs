@@ -28,9 +28,9 @@ public class Abstrakcyjna_Jednostka
         this.nastepnik = nastepnik;
 	}
 
-	protected virtual void CzyWokonac(Abstrakcyjny_Rozkaz rozkaz)
+	protected virtual bool CzyWokonac(Abstrakcyjny_Rozkaz rozkaz)
 	{
-		throw new System.NotImplementedException();
+        return Lista_Rozkazow.Contains(rozkaz.ID);
 	}
 
 	public virtual void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)

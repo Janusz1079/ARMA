@@ -11,5 +11,33 @@ using System.Text;
 
 public class F_Czolg : Fabryka
 {
+    public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+    {
+        if(this.CzyWokonac(rozkaz))
+        {
+            if(rozkaz.ID == 4) //Rozkaz produkuj
+            {
+                R_Produkuj RozkazProdukcji = (R_Produkuj)rozkaz;
+
+                Zasob_wojskowy Wyprodukowany = this.ProdukujCzolg(RozkazProdukcji.ParametryProduktu);
+                Abstrakcyjny_Rozkaz RozkazDodania = RozkazProdukcji.CentralaWytworzRozkaz("dodajzasob");
+                R_DodajZasobWojskowy RozkazDodaniaZrzutowany = (R_DodajZasobWojskowy)RozkazDodania;
+                RozkazDodaniaZrzutowany.Dolacz_Zasob(RozkazProdukcji.DocelowaBaza, Wyprodukowany);
+
+                RozkazProdukcji.CentralaZlecWykonanieRozkazu((Abstrakcyjny_Rozkaz)RozkazDodaniaZrzutowany);
+            }
+            
+        }
+        else
+        {
+            nastepnik.Wykonaj(rozkaz);
+        }
+    }
+
+    public Zasob_wojskowy ProdukujCzolg(string Parametry_Czolgu)
+    {
+        return new Czolg();
+
+    }
 }
 

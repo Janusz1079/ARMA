@@ -11,7 +11,19 @@ using System.Text;
 
 public class R_DodajZasobWojskowy : Abstrakcyjny_Rozkaz
 {
-	public override void Raportuj(string rezultat)
+    public virtual string DocelowaBaza
+    {
+        get;
+        set;
+    }
+
+    protected virtual Zasob_wojskowy Zasob_Do_Dodania
+    {
+        get;
+        set;
+    }
+
+    public override void Raportuj(string rezultat)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -21,5 +33,10 @@ public class R_DodajZasobWojskowy : Abstrakcyjny_Rozkaz
         ID = 2;
 	}
 
+    public virtual void Dolacz_Zasob(string DocelowaBaza, Zasob_wojskowy Zasob_Do_Dodania)
+    {
+        this.Zasob_Do_Dodania = Zasob_Do_Dodania;
+        this.DocelowaBaza = DocelowaBaza;
+    }
 }
 

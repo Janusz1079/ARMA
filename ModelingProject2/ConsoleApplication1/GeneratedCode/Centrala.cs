@@ -59,28 +59,38 @@ public class Centrala
         Console.WriteLine(Raport);
     }
 
-    public virtual void WydajRozkaz(string Tekst_Rozkazu)
-	{
+    public virtual Abstrakcyjny_Rozkaz Wytworz_rozkaz(string Tekst_Rozkazu)
+    {
         string[] ParametryRozkazu = Tekst_Rozkazu.Split('|');
-        Abstrakcyjny_Rozkaz Rozkaz = null;
-
         foreach (Abstrakcyjna_Fabryka_Rozkazow Fabryka in Lista_Fabryk_Rozkazow)
         {
             if (Fabryka.nazwa_rozkazu == ParametryRozkazu[0])
             {
-                Rozkaz = Fabryka.TworzRozkaz(Tekst_Rozkazu, this);
-                break;
+                return Fabryka.TworzRozkaz(Tekst_Rozkazu, this);
             }
         }
 
+        return null;
+    }
+
+    public virtual void WydajRozkaz(string Tekst_Rozkazu)
+	{
+        
+        Abstrakcyjny_Rozkaz Rozkaz = this.Wytworz_rozkaz(Tekst_Rozkazu);
+
         if (Rozkaz != null)
         {
-            straznik_listy_jednostek.Wykonaj(Rozkaz);
+            this.ZlecWykonanieRozkazu(Rozkaz);
         }
         else
         {
             Console.WriteLine("Bledna nazwa rozkazu");
         }
+    }
+
+    public virtual void ZlecWykonanieRozkazu(Abstrakcyjny_Rozkaz rozkaz)
+    {
+        straznik_listy_jednostek.Wykonaj(rozkaz);
     }
 
     public virtual string Lista_Dostepnych_Rozkazow()

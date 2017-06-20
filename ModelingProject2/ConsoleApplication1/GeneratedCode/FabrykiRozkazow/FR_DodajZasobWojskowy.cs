@@ -20,6 +20,5 @@ public class FR_DodajZasobWojskowy : Abstrakcyjna_Fabryka_Rozkazow
 	{
         nazwa_rozkazu = "dodajzasob";
     }
-
 }
 

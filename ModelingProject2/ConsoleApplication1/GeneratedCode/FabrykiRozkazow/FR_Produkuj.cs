@@ -11,10 +11,14 @@ using System.Text;
 
 public class FR_Produkuj : Abstrakcyjna_Fabryka_Rozkazow
 {
-	public override Abstrakcyjny_Rozkaz TworzRozkaz(string parametr, Centrala info)
+
+    public override Abstrakcyjny_Rozkaz TworzRozkaz(string ParametryRozkazu, Centrala info)
 	{
-		throw new System.NotImplementedException();
-	}
+        string[] Parametry = ParametryRozkazu.Split('|');
+        R_Produkuj Nowy_Rozkaz = new R_Produkuj();
+        Nowy_Rozkaz.Ustaw_Parametry_Rozkazu(Parametry[1], info.ZlecWykonanieRozkazu, info.Wytworz_rozkaz);
+        return Nowy_Rozkaz;
+    }
 
 	public FR_Produkuj()
 	{
