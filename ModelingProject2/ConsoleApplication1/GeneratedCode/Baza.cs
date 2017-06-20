@@ -22,5 +22,28 @@ public class Baza : Abstrakcyjna_Jednostka
 		set;
 	}
 
+    public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+    {
+        if(this.CzyWokonac(rozkaz))
+        {
+            if(rozkaz.ID == 2) // Dodanie Jednostki do bazy
+            {
+                R_DodajZasobWojskowy RozkazZrzutowany = (R_DodajZasobWojskowy)rozkaz;
+                if(RozkazZrzutowany.DocelowaBaza == Nazwa_Bazy)
+                {
+                    ListaZasobow.Add(RozkazZrzutowany.Zasob_Do_Dodania);
+                }
+                else
+                {
+                    nastepnik.Wykonaj(rozkaz);
+                }
+            }
+        }
+        else
+        {
+            nastepnik.Wykonaj(rozkaz);
+        }
+    }
+
 }
 

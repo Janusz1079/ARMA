@@ -17,7 +17,7 @@ public class R_DodajZasobWojskowy : Abstrakcyjny_Rozkaz
         set;
     }
 
-    protected virtual Zasob_wojskowy Zasob_Do_Dodania
+    public virtual Zasob_wojskowy Zasob_Do_Dodania
     {
         get;
         set;
