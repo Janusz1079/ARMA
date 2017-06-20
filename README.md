@@ -1,2 +1,0 @@
-# ARMA
-Projekt "Symulator armii"
