@@ -13,7 +13,7 @@ public class Zolniez : Zasob_wojskowy
 {
     public Zolniez()
     {
-        Nazwa = "Zolniez";
+        Nazwa = "Zolnierz";
     }
 }
 

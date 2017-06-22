@@ -19,7 +19,13 @@ public class FR_Cwiczenia : Abstrakcyjna_Fabryka_Rozkazow
 	public FR_Cwiczenia()
 	{
         nazwa_rozkazu = "cwiczenia";
+        Wydawany_Tylko_Przez_Jednostki = false;
 	}
+
+    public override string PodajFormuleRozkazu()
+    {
+        return "Cwiczenia\n";
+    }
 
 }
 

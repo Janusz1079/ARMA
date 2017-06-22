@@ -17,10 +17,20 @@ public class Abstrakcyjna_Fabryka_Rozkazow
 		set;
 	}
 
-	public virtual Abstrakcyjny_Rozkaz TworzRozkaz(string ParametryRozkazu, Centrala info)
+    public virtual bool Wydawany_Tylko_Przez_Jednostki
+    {
+        get;
+        set;
+    }
+
+    public virtual Abstrakcyjny_Rozkaz TworzRozkaz(string ParametryRozkazu, Centrala info)
 	{
 		throw new System.NotImplementedException();
 	}
 
+    public virtual string PodajFormuleRozkazu()
+    {
+        throw new System.NotImplementedException();
+    }
 }
 

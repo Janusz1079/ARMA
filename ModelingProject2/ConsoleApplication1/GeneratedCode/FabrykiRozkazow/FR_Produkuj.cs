@@ -16,13 +16,19 @@ public class FR_Produkuj : Abstrakcyjna_Fabryka_Rozkazow
         string[] Parametry = ParametryRozkazu.Split('|');
         R_Produkuj Nowy_Rozkaz = new R_Produkuj(info.Odczytaj_Raport);
 
-        Nowy_Rozkaz.Ustaw_Parametry_Rozkazu(String.Join("|", Parametry.Skip(2).ToArray()), Parametry[1], info.ZlecWykonanieRozkazu, info.Wytworz_rozkaz);
+        Nowy_Rozkaz.Ustaw_Parametry_Rozkazu(String.Join("|", Parametry.Skip(2).ToArray()), Parametry[1], info.ZlecWykonanieRozkazu, info.Wytworz_rozkaz_zlecony_przez_jednostke);
         return Nowy_Rozkaz;
     }
 
 	public FR_Produkuj()
 	{
         nazwa_rozkazu = "produkuj";
+        Wydawany_Tylko_Przez_Jednostki = false;
+    }
+
+    public override string PodajFormuleRozkazu()
+    {
+        return "produkuj|nazwa_bazy_docelowej|typ_obiektu_wojskowego_do_produkcji\n";
     }
 
 }

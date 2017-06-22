@@ -59,7 +59,21 @@ public class Centrala
         Console.WriteLine(Raport);
     }
 
-    public virtual Abstrakcyjny_Rozkaz Wytworz_rozkaz(string Tekst_Rozkazu)
+    public virtual Abstrakcyjny_Rozkaz Wytworz_rozkaz(string Tekst_Rozkazu) //Metoda jest w stanie zlecic tylko te rozkazy kotore moga byc wydawane bez udzialu jednostek np dodaj_jednoskte nie moze byc zrealizowany bezposrednio przez centrale potrzebna jest fabryka jednostek
+    {
+        string[] ParametryRozkazu = Tekst_Rozkazu.Split('|');
+        foreach (Abstrakcyjna_Fabryka_Rozkazow Fabryka in Lista_Fabryk_Rozkazow)
+        {
+            if (Fabryka.Wydawany_Tylko_Przez_Jednostki == false && Fabryka.nazwa_rozkazu == ParametryRozkazu[0])
+            {
+                return Fabryka.TworzRozkaz(Tekst_Rozkazu, this);
+            }
+        }
+
+        return null;
+    }
+
+    public virtual Abstrakcyjny_Rozkaz Wytworz_rozkaz_zlecony_przez_jednostke(string Tekst_Rozkazu) // Metoda umozliwia jednsotkom zlecanie specjalnych rozkzow, ktorych centrala nie jest w stanie sama zlecac jak np dodanie jednostki
     {
         string[] ParametryRozkazu = Tekst_Rozkazu.Split('|');
         foreach (Abstrakcyjna_Fabryka_Rozkazow Fabryka in Lista_Fabryk_Rozkazow)
@@ -75,7 +89,6 @@ public class Centrala
 
     public virtual void WydajRozkaz(string Tekst_Rozkazu)
 	{
-        
         Abstrakcyjny_Rozkaz Rozkaz = this.Wytworz_rozkaz(Tekst_Rozkazu);
 
         if (Rozkaz != null)
@@ -98,7 +111,10 @@ public class Centrala
         string ListaDostepnychRozkazow = "";
         foreach(Abstrakcyjna_Fabryka_Rozkazow Fabryka in Lista_Fabryk_Rozkazow)
         {
-            ListaDostepnychRozkazow = ListaDostepnychRozkazow + " " + Fabryka.nazwa_rozkazu;
+            if(Fabryka.Wydawany_Tylko_Przez_Jednostki == false) // Metoda listuje tylko rozkazu zlecane bezposrenio przez centrale (uzytkownika)
+            {
+                ListaDostepnychRozkazow = ListaDostepnychRozkazow + Fabryka.PodajFormuleRozkazu();
+            }
         }
         return ListaDostepnychRozkazow;
     }

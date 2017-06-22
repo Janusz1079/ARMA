@@ -21,6 +21,12 @@ public class FR_DodajZasobWojskowy : Abstrakcyjna_Fabryka_Rozkazow
 	public FR_DodajZasobWojskowy()
 	{
         nazwa_rozkazu = "dodajzasob";
+        Wydawany_Tylko_Przez_Jednostki = true;
+    }
+
+    public override string PodajFormuleRozkazu()
+    {
+        return "";
     }
 }
 

@@ -16,13 +16,19 @@ public class FR_Mobilizacja : Abstrakcyjna_Fabryka_Rozkazow
         string[] Parametry = ParametryRozkazu.Split('|');
         R_Mobilizacja Nowy_Rozkaz = new R_Mobilizacja(info.Odczytaj_Raport);
 
-        Nowy_Rozkaz.Ustaw_Parametry_Rozkazu(String.Join("|", Parametry.Skip(2).ToArray()), Parametry[1], info.ZlecWykonanieRozkazu, info.Wytworz_rozkaz);
+        Nowy_Rozkaz.Ustaw_Parametry_Rozkazu(String.Join("|", Parametry.Skip(2).ToArray()), Parametry[1], info.ZlecWykonanieRozkazu, info.Wytworz_rozkaz_zlecony_przez_jednostke);
         return Nowy_Rozkaz;
     }
 
 	public FR_Mobilizacja()
 	{
         nazwa_rozkazu = "mobiliza";
+        Wydawany_Tylko_Przez_Jednostki = false;
+    }
+
+    public override string PodajFormuleRozkazu()
+    {
+        return "mobiliza|nazwa_bazy_docelowej|typ_zolnierza_do_mobilizacji\n";
     }
 
 }
