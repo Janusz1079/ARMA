@@ -66,9 +66,9 @@
     <Compile Include="GeneratedCode\Zasoby_wojskowe\Karabin.cs" />
     <Compile Include="GeneratedCode\Poligon.cs" />
     <Compile Include="GeneratedCode\Fabryki_zasobow\P_Czolgista.cs" />
-    <Compile Include="GeneratedCode\Fabryki_zasobow\P_Zolniez.cs" />
+    <Compile Include="GeneratedCode\Fabryki_zasobow\P_Zolnierz.cs" />
     <Compile Include="GeneratedCode\Zasob_wojskowy.cs" />
-    <Compile Include="GeneratedCode\Zasoby_wojskowe\Zolniez.cs" />
+    <Compile Include="GeneratedCode\Zasoby_wojskowe\Zolnierz.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

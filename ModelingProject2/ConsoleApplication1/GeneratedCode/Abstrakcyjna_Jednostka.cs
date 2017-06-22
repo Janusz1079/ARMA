@@ -28,7 +28,7 @@ public class Abstrakcyjna_Jednostka
         this.nastepnik = nastepnik;
 	}
 
-	public virtual bool CzyWokonac(Abstrakcyjny_Rozkaz rozkaz)
+	protected virtual bool CzyWokonac(Abstrakcyjny_Rozkaz rozkaz)
 	{
         return Lista_Rozkazow.Contains(rozkaz.ID);
 	}
@@ -38,7 +38,7 @@ public class Abstrakcyjna_Jednostka
         this.NastepnikWykonaj(rozkaz);
     }
 
-    public virtual void NastepnikWykonaj(Abstrakcyjny_Rozkaz rozkaz)
+    protected virtual void NastepnikWykonaj(Abstrakcyjny_Rozkaz rozkaz)
     {
         if (nastepnik != null)
         {

@@ -11,12 +11,6 @@ using System.Text;
 
 public class Centrala
 {
-	private int Current_ID
-	{
-		get;
-		set;
-	}
-
 	public virtual Abstrakcyjna_Jednostka straznik_listy_jednostek
 	{
 		get;
@@ -39,7 +33,6 @@ public class Centrala
 	{
         straznik_listy_jednostek = null;
 
-        Current_ID = 0;
         Lista_Fabryk_Rozkazow = new List<Abstrakcyjna_Fabryka_Rozkazow>();
         Lista_Fabryk_Rozkazow.Add(new FR_Cwiczenia());
         Lista_Fabryk_Rozkazow.Add(new FR_Mobilizacja());
@@ -51,7 +44,7 @@ public class Centrala
         this.Dodaj(new F_Karabin());
         this.Dodaj(new F_Czolg());
         this.Dodaj(new P_Czolgista());
-        this.Dodaj(new P_Zolniez());
+        this.Dodaj(new P_Zolnierz());
     }
 
     public virtual void Odczytaj_Raport(string Raport)
@@ -93,7 +86,7 @@ public class Centrala
 
         if (Rozkaz != null)
         {
-            this.ZlecWykonanieRozkazu(Rozkaz);
+            this.Zlec_Wykonanie_Rozkazu_Jednostkom(Rozkaz);
         }
         else
         {
@@ -101,7 +94,7 @@ public class Centrala
         }
     }
 
-    public virtual void ZlecWykonanieRozkazu(Abstrakcyjny_Rozkaz rozkaz)
+    public virtual void Zlec_Wykonanie_Rozkazu_Jednostkom(Abstrakcyjny_Rozkaz rozkaz)
     {
         straznik_listy_jednostek.Wykonaj(rozkaz);
     }

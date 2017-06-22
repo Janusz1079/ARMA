@@ -237,89 +237,24 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4496092a-7f49-48b3-8d17-f9feacb23531"
+                      name="Lower"
+                      value="6" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="96aed6ea-aebe-46e0-9f08-7f12b2beb5a9"
+                      name="Upper"
+                      value="6" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="5a147bae-96fb-4216-a559-7e4a46fd73db"
-            name="Current_ID"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="0a0a9028-f07c-46d9-bf9c-ccb48077bc79"
-                name="property"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e3a7be1b-6125-4425-8681-714825492419">
-                    <propertyInstance
-                      Id="1b1d7602-b43a-4c1e-95bd-f031de993e43"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e5a6956a-98a7-4b8e-ae9d-8e080ee38457">
-                    <propertyInstance
-                      Id="7ae36d8f-1770-4309-88c7-e16abcd8a854"
-                      name="Get"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2b30d693-8e5e-4f45-b080-960224476e67">
-                    <propertyInstance
-                      Id="e2ea3fec-c952-4cbd-8c68-542c098659e8"
-                      name="HasBody"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c8ae645b-a9c2-4508-9de4-625f71f1be89">
-                    <propertyInstance
-                      Id="01ddca4b-dea6-43b2-912d-6581d12dcc54"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2679b304-3755-45e6-ac83-039ef5941ce5">
-                    <propertyInstance
-                      Id="2bf5099e-8a3e-4b37-bee6-c00f40f3e669"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3381549a-d9d4-4715-85db-1afbb90dd8b7">
-                    <propertyInstance
-                      Id="391360d4-3154-4b4f-a774-ae32944aa810"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b56b42f8-1dcb-4775-b327-a4452cb57bb4">
-                    <propertyInstance
-                      Id="60423c2e-6866-4221-ba83-939e1ae63f04"
-                      name="Set"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="9f45785b-d2d9-485b-a705-51ee746d3c9e"
-                LastKnownName="int"
-                LastKnownLocation="ModelingProject2.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="948422cc-a939-4699-a95a-cab560c0378d"
@@ -672,6 +607,107 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="a9f02b49-8ed4-4e15-9fd4-1acda5e07284"
+            name="Wytworz_rozkaz"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="36cfb7fa-f8db-4ef1-8ba5-547820dea123"
+                  name="Tekst_Rozkazu"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c3249abc-576a-4639-adff-c096ee3cc79a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6b2b8f50-d1ac-420d-a4aa-a604d56ceda5"
+            name="Wytworz_rozkaz_zlecony_przez_jednostke"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1cb28a1b-3292-4748-aaaf-df3dcc2869a3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="52b55ef9-17be-4351-b8d5-067fc10bb235"
+                  name="Tekst_Rozkazu"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="353a40f3-d4a5-484a-a066-62d8ca77fa08"
+            name="Zlec_Wykonanie_Rozkazu_Jednostkom"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="30c61870-74b8-4122-9112-8faebbd577de"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -744,13 +780,88 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="eb4e70b5-8d3f-49eb-9be0-9a0c1c302d58"
+            name="Wykonaj"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6db45711-3394-4169-8780-969214ae88a6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6351e446-28af-422e-9f25-5108e71d0ea2">
+                    <propertyInstance
+                      Id="e965b7c7-4df2-46db-afa5-6823bde09d35"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dee4faa4-b6c4-422c-a971-150f2af92bb6">
+                    <propertyInstance
+                      Id="bf14d0e6-306c-4714-a557-886fc19714d8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82128d34-67bd-4a66-aeea-f57ef947331a">
+                    <propertyInstance
+                      Id="b9c54157-7287-4995-a8ad-5b9f402b0df1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9597b22-cde8-4ccb-9b9d-bc5c76a5b626">
+                    <propertyInstance
+                      Id="e1eabd1f-874a-4ab8-90c3-fd4ea3355e7e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cfa3b621-31f3-4a45-bc18-ab507bad7185">
+                    <propertyInstance
+                      Id="7660b6b7-3dfe-410c-9e8d-2341b03c6fc9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b22cedb-b0e2-41d1-b65b-ecf5f3ed5741">
+                    <propertyInstance
+                      Id="9c5d87f6-5dca-46da-a853-d6eca8f41469"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bba3eed0-cacf-483f-b98d-8b0562f414af"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="40a0457b-b39b-4cf6-8080-8fb103982773"
-        name="P_Zolniez"
+        name="P_Zolnierz"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -802,7 +913,7 @@
             Id="f00f98fe-7a2c-4e45-88b2-50845ebebe42">
             <classMoniker
               Id="5a0d5272-c7b8-4a6c-9175-dfe862b43ec5"
-              LastKnownName="Zolniez"
+              LastKnownName="Zolnierz"
               LastKnownLocation="ModelingProject2.uml" />
           </dependency>
         </suppliersInternal>
@@ -816,6 +927,122 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3a7e9a42-827b-421d-8b13-6cf8acb4fbbd"
+            name="Wykonaj"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="58d0460b-6c2c-4d44-a452-cbfb67bd0ac1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c2052df-d47b-4834-88b1-23456336d178">
+                    <propertyInstance
+                      Id="c75043f9-63f4-4355-a74c-5324d129ab38"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbabb9f6-ac7e-4c4c-9841-8ce500e5a49c">
+                    <propertyInstance
+                      Id="6e7407b8-9d9c-4110-90a8-d8f3f6ff5700"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="48c79461-9923-4ed0-a88f-6c3c80f6080c">
+                    <propertyInstance
+                      Id="510e39c1-a85e-4a99-98ee-f60a4708c27d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8b924fc-3585-4ed6-a5f5-15e885dd52d1">
+                    <propertyInstance
+                      Id="4bd808cb-23f2-43a9-b643-ee6144fdec27"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5be6d671-2b0c-4c34-a553-4cb23da1b80f">
+                    <propertyInstance
+                      Id="50b1d9e0-91d0-49ac-8562-53e11c7c9bb1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb044c85-0e47-47d7-93fa-ec95ab1bd6c8">
+                    <propertyInstance
+                      Id="679d71bf-825d-4e19-902b-2865a1ac372d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf6595c9-25bc-479f-8bbd-30711f7dc971"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1902e9bc-a250-4abf-b82a-14ccc723edb4"
+            name="MobilizujZolnierza"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fabc2b55-0c58-4fb8-9a28-3aabf894e2c2"
+                  name="Parametry_Zolnierza"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="733feba0-ce24-4f2a-bcd1-a9d360fd7a54"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="71d1366d-10ae-4d23-80eb-4010614513d8"
+                      LastKnownName="Zasob_wojskowy"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -887,6 +1114,122 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="44599ce8-d98a-4d3c-9c42-c85af16a65df"
+            name="Wykonaj"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="acc2af98-d64f-4036-b369-0d0b7687ab64"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd87dff2-7ed2-40c1-aa79-d6d3de018d11">
+                    <propertyInstance
+                      Id="468b9273-b402-44a7-a513-ba9f6784624f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31575276-3a3d-46fe-bb02-a8185c09437d">
+                    <propertyInstance
+                      Id="f2b508fe-4612-4361-be76-bb35cc6e1710"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ed9b7c9-7299-4a49-8790-dbacd8e88398">
+                    <propertyInstance
+                      Id="32e81226-bc0a-471c-9f97-56f7d3432932"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33ceb351-0424-410c-8adf-1a822fc3a7d9">
+                    <propertyInstance
+                      Id="efe54938-560e-4c51-bc0d-d29db2b0527c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3fd18c0-39a3-48c4-9c05-82544b033886">
+                    <propertyInstance
+                      Id="c1cfe6ef-a758-4295-bd01-9c6504ee4bfe"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="952283c1-e74e-4dbe-8de8-bc1c1bb0dba8">
+                    <propertyInstance
+                      Id="c7e69e9c-37d2-4a1f-96c6-762bd85937d2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="666b6680-f995-41b1-98ce-4c496ef72b4b"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="22853096-d092-4e01-a5bd-ea15c6a26b98"
+            name="MobilizujCzolgiste"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="697e1475-b66a-434f-ac6a-d1be81835a74"
+                  name="Parametry_Czolgisty"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="193351d5-d3f0-4544-952d-f606e65293cd"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="71d1366d-10ae-4d23-80eb-4010614513d8"
+                      LastKnownName="Zasob_wojskowy"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -966,6 +1309,81 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="5b04561b-c2e2-4079-ac38-5cbdb14d8b0a"
+            name="Wykonaj"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2d6a199b-b32c-4bcd-9895-93309bd94839"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59574088-da18-4e8a-aca5-9711e6bd3c61">
+                    <propertyInstance
+                      Id="31251fde-9baa-45bf-82ec-ed858a7294b3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9acfe1f-ed61-496a-a9b0-9bbcd1c73a49">
+                    <propertyInstance
+                      Id="5bcc56d2-e7d5-49d3-922f-a37edc09e679"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6460d80-8c4b-42e0-abff-3bad1d57cacc">
+                    <propertyInstance
+                      Id="6ca43a66-7f0e-44cd-a6df-d9352577c49c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c486cc6f-de84-4ed4-9158-cd5018770457">
+                    <propertyInstance
+                      Id="c6c2c0c5-f0ab-4af6-a9ac-57470094b328"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2475703b-5bf5-4d06-b173-5114f73c93f1">
+                    <propertyInstance
+                      Id="b5823a30-a774-404b-96af-37a4b8d62977"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5990a503-6eb2-4419-acf0-a22320e9031b">
+                    <propertyInstance
+                      Id="1cfc8453-1064-4d82-a4ca-a5e716ef890b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bc938537-dae1-4165-8317-e33013a93fbe"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1038,6 +1456,122 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f02704f5-b8aa-4d9c-91d9-d9bf82eaa274"
+            name="Wykonaj"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1bef45f8-0d96-4758-821d-41a15a0eda7d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="742f5268-7f85-4225-9ed2-586769ce7b2d">
+                    <propertyInstance
+                      Id="a85cb71b-2530-4bbb-817c-6aedc2a760f0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1c8b7f3-c5ad-4357-8606-01f9909bddc8">
+                    <propertyInstance
+                      Id="751275b2-3dda-438f-8a7d-033c03e31eff"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="332d072b-c8c5-490b-9783-c9422bf4668e">
+                    <propertyInstance
+                      Id="41bda86b-ac81-481c-b30a-9995ff783679"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="090604b5-a3be-4f23-9d14-77cae2532233">
+                    <propertyInstance
+                      Id="857fc382-67be-4332-aa66-347c9b37201a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="54e6c4ee-416b-4d1f-a863-93213f4376e9">
+                    <propertyInstance
+                      Id="88dfb4a0-5a09-4a84-8cd3-9267dc50a1af"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2eab4cc-8363-4974-86e6-2d8a6b694b2a">
+                    <propertyInstance
+                      Id="7c1c5ddb-0423-4d5d-9408-8ac5c210dbe7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cf5a7e73-4d9d-4e36-9455-86e93d191164"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="15a98cb5-88ff-4816-932d-12a17d6df880"
+            name="ProdukujCzolg"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cdea10b9-a93b-4731-811c-655d3696f132"
+                  name="Parametry_Czolgu"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4dd4dbd8-6e29-49d5-9a97-0f479c2a0816"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="71d1366d-10ae-4d23-80eb-4010614513d8"
+                      LastKnownName="Zasob_wojskowy"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1116,6 +1650,122 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4d4950d1-1160-4ac8-94ce-43735d0f65f3"
+            name="Wykonaj"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bd6d9ee6-5424-4cf1-a0cb-8e66aff983ca"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65b913a4-5988-4c6f-9569-10163130ecde">
+                    <propertyInstance
+                      Id="7005b1e6-eb1a-4444-b62d-fa497ea14322"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7a04779-16d9-4b20-8762-96883e37c16c">
+                    <propertyInstance
+                      Id="dc5add47-a2aa-4872-80cf-f91cccfe3806"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb2813cd-9e9e-4cd5-ad00-df9bdb50fd5a">
+                    <propertyInstance
+                      Id="33d14793-9c4f-4dee-8b7b-8228eba77f0a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c056b88d-a0d9-4ec0-b549-f4f5674da8d3">
+                    <propertyInstance
+                      Id="1f2e82ee-744c-47ae-a169-0a72799b7623"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04acbe02-c774-4609-9a35-a924bae7fa3f">
+                    <propertyInstance
+                      Id="18f2911d-4359-4464-8412-fb6095297cc8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9188ac9b-4df9-402f-a694-bce9830fa10a">
+                    <propertyInstance
+                      Id="3c3a16ed-44aa-4d2e-ad67-379537448448"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7913d96e-b200-491c-9d4f-0b6d0c0461b7"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="507e7cc3-f866-4e15-a62c-c8ee5302d55a"
+            name="ProdukujKarabin"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d0d3d339-31ff-4dd5-b73f-7d47d6d96d51"
+                  name="Parametry_Karabinu"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="317faff2-6152-42fb-a952-4633b2ed3b6a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="71d1366d-10ae-4d23-80eb-4010614513d8"
+                      LastKnownName="Zasob_wojskowy"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1262,6 +1912,24 @@
                 LastKnownLocation="ModelingProject2.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="354b1eb3-980d-4101-b279-e158bf5ae735"
+            name="Nazwa_Bazy"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="46944d72-987d-48ad-8553-ff3b47939775"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -1272,6 +1940,81 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="dd8dc509-3e06-42ec-9f6d-459ea1fdf3f8"
+            name="Wykonaj"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bd9f6fcd-f4d1-4d60-adcb-7ed2f23c30c0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46d305a4-f7d8-4512-a919-f11ee4c09eb5">
+                    <propertyInstance
+                      Id="d74510fd-7653-4bb4-984b-eb18c1e3f92e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61342627-4f56-4d9f-9a7e-64cf8d1c5f8e">
+                    <propertyInstance
+                      Id="0164fcdf-14a8-41b2-8c92-f1349cdac320"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3a83191-d5e3-4239-8e81-96e1d11fd371">
+                    <propertyInstance
+                      Id="f1c2579b-1735-4966-8596-19cef449b6e9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f9cb34cb-748c-4f4d-8aaf-b181d9f2579f">
+                    <propertyInstance
+                      Id="eaf6bf8c-14b2-4852-b78a-5012d2648cd6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d191ff8b-3882-45d7-b843-f59342aa7966">
+                    <propertyInstance
+                      Id="14eced35-0649-4916-9e35-cdf0318319fd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3bb44ad7-1282-42df-bee5-003363afd0d9">
+                    <propertyInstance
+                      Id="c43ba8cc-1039-4c90-91f2-1af6f33c0c88"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fa143333-9b6c-454c-88aa-672c45f99ecf"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1343,6 +2086,16 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4fd7cb52-96f2-4350-a31b-1648c23e47b9"
+            name="B_Warszawa"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1405,6 +2158,16 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="db373000-2584-4c80-97b8-2bdee818c8d8"
+            name="B_Wroclaw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1466,7 +2229,7 @@
           <association
             Id="c332b3b3-e2f6-4bcd-b21c-82d3074e5a64"
             isDerived="false"
-            sourceEndRoleName="straznik_jenostek"
+            sourceEndRoleName="straznik_listy_jednostek"
             targetEndRoleName=" nastepnik"
             isLeaf="false"
             isAbstract="false">
@@ -1478,7 +2241,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="6b61edef-e535-4f3c-b89d-77061396fbd9"
-                  name="straznik_jenostek"
+                  name="straznik_listy_jednostek"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1660,7 +2423,6 @@
           <operation
             Id="77905bf9-cd97-4e1d-baab-4fcb97e27f49"
             name="CzyWokonac"
-            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1719,7 +2481,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="205610b8-3545-48a3-9722-58d32e9afc5c"
+                  Id="3596ec76-20e7-4a26-a1b1-2f9a2a70d2f2"
                   name="rozkaz"
                   direction="In"
                   isUnique="false">
@@ -1816,6 +2578,32 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="64cfe9a7-3957-4b7c-80cb-e1f925d44430"
+            name="NastepnikWykonaj"
+            visibility="Protected"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b1e6b5d6-6aa7-424a-ade8-fbfa73658c23"
+                  name="rozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="dcb9ed50-a82c-4d00-8e71-2c4a95e109f5"
+                      LastKnownName="Abstrakcyjny_Rozkaz"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -2108,6 +2896,39 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="02c3ef4e-c42b-4bc2-8f1b-9f5235cec0f6"
+            name="Abstrakcyjny_Rozkaz"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f0c3dd54-5b59-4724-9d38-403f2f70b69e"
+            name="Abstrakcyjny_Rozkaz"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e645b6af-d3c3-4361-81d8-70361a72b7a7"
+                  name="Callback"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dad17e2a-faba-48df-9d92-87c331711ac2"
+                      LastKnownName="Action&lt;string&gt;"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -2171,70 +2992,83 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6d03f1b6-c668-47ab-81ad-70d268659dd3"
+            name="DocelowaBaza"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="46944d72-987d-48ad-8553-ff3b47939775"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5965d55d-0a6e-41f6-afdd-facf0905d703"
+            name="ParametryProduktu"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="46944d72-987d-48ad-8553-ff3b47939775"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="951ecdce-766c-4051-b485-deffbc852153"
-            name="Raportuj"
+            Id="d9385c0d-cc38-4d9e-81a0-ce12dd8fbeca"
+            name="R_Mobilizacja"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="64423016-92ba-4c53-8052-52fde7bdc7d0"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="095625d4-cb78-41be-9430-562a508eec57">
-                    <propertyInstance
-                      Id="08d93af6-f0ce-486a-aca6-115a5159afad"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="007635bf-1d99-4faf-a320-6d1270975204">
-                    <propertyInstance
-                      Id="af2788ab-9cbf-4723-86f3-eae17c4e4fc6"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c0613720-ea67-4e4d-afe8-97ac85105bd5">
-                    <propertyInstance
-                      Id="ea75888f-a182-4519-9875-0acdf487d5c7"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="6f5d26be-053d-45bd-bda6-51b70d879b6c">
-                    <propertyInstance
-                      Id="5b1a34da-9387-41fa-af05-4fef8bbbb182"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c16609ef-7dd2-47a2-8cf9-2140852fdf5c">
-                    <propertyInstance
-                      Id="613e3682-d375-44e3-b3f4-71e741958d86"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="393b42fe-2f85-424b-a6b5-a09fb452443c">
-                    <propertyInstance
-                      Id="49d5a83e-c0b5-496a-ab1d-bb19ed3b08ea"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="12b0b157-52af-4116-9f64-4289bd8acd68"
-                  name="rezultat"
+                  Id="ad7933ee-faa9-4448-af0d-7a62ca8f9bc3"
+                  name="Callback"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dad17e2a-faba-48df-9d92-87c331711ac2"
+                      LastKnownName="Action&lt;string&gt;"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2c202dbd-c1e5-40fe-851b-6d4d7aa96ead"
+            name="Ustaw_Parametry_Rozkazu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c7763ada-2f8f-479f-aa98-8c3d03807dca"
+                  name="ParametryProduktu"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
@@ -2245,66 +3079,56 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60c45224-de57-43bd-b0d5-078d58a225d6"
+                  name="DocelowaBaza"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7853a9be-c540-4bbb-9318-b38c4103c113"
+                  name="CentralaZlecWykonanieRozkazu"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="7203162f-141f-4111-9a6c-45a08b4ac53c"
+                      LastKnownName="Action&lt;Abstrakcyjny_Rozkaz&gt;"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="972743d1-215f-475d-898a-818a89eea68d"
+                  name="CentralaWytworzRozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dca2fbef-3e71-44e0-bd7d-f6226afc3e24"
+                      LastKnownName="Func&lt;string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="10251393-ee3c-4acd-a0a3-9ba1f16306fe"
+                  name="Abstrakcyjny_Rozkaz&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
             </ownedParameters>
-          </operation>
-          <operation
-            Id="a47f22b6-1211-407f-aa50-9b625eb6b450"
-            name="R_Mobilizacja"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="871a4520-bedc-4cd3-a7e2-22fe005affff"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2408e019-52d8-4107-ade9-81caa9a2bd7d">
-                    <propertyInstance
-                      Id="9a99689d-8254-447b-927b-0e87b328227c"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d171ddae-ae29-4fe9-b81c-b4c72eb7bbcc">
-                    <propertyInstance
-                      Id="e47da8b2-50b3-4e74-818e-f0ab6ae5149a"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b9313b04-f6de-44ab-aab0-dadc764737c4">
-                    <propertyInstance
-                      Id="bd7902cd-fe19-45aa-9e85-a644ffcf2c6d"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="a76f3a6f-eb36-4312-85c2-b8cc3abe19a0">
-                    <propertyInstance
-                      Id="713774ce-f66c-47be-b1bd-3ef4feb1a742"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="37d90a53-a6b1-4d08-84c8-7b9126c65c95">
-                    <propertyInstance
-                      Id="22262fd2-2dd3-4588-b417-6a8060a97c7f"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="df040aef-ba5d-4f30-9172-6e691c4b1e73">
-                    <propertyInstance
-                      Id="cef9984d-43b5-4eaa-85a3-1d88c0071b03"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -2446,63 +3270,29 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="71682d61-e3ac-4fa5-8edd-d10fe360a8da"
+            Id="fb7303df-bdf8-4609-bcaf-886bca053440"
             name="R_Cwiczenia"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="b49325e7-e3ee-49e4-bad4-a93c8dde55b1"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="2a1e95c2-43ad-40ae-8e3e-f3ce61e1c20e">
-                    <propertyInstance
-                      Id="c2b63443-ee70-46ed-b43d-04762d57916f"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8c24f28a-9e05-40d7-9c2a-b166b99952f7">
-                    <propertyInstance
-                      Id="7cb0b2c6-0491-4b6d-9a79-7a2af929ac84"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="bb55a47d-9fb5-4679-bbb9-7c2094116418">
-                    <propertyInstance
-                      Id="797e8190-b7b1-4470-b750-3e52bd663e61"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5f34690f-3294-4b92-8f23-6c5716b2b0af">
-                    <propertyInstance
-                      Id="61d1fc84-6266-461d-8022-03eecacc7ece"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="21972d10-7281-4ecb-87a8-2eb3b88940c1">
-                    <propertyInstance
-                      Id="f1c259ce-ce25-4f5c-bd83-d09e2d77c5ba"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="34bb6166-7197-47ac-a0c5-01db1737d544">
-                    <propertyInstance
-                      Id="52c7c212-8085-4708-85a1-1339a1941830"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7e2afff9-2f25-43e6-a5e3-5950116b350e"
+                  name="Callback"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dad17e2a-faba-48df-9d92-87c331711ac2"
+                      LastKnownName="Action&lt;string&gt;"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -2633,6 +3423,24 @@
                 LastKnownLocation="ModelingProject2.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="beb8adef-8736-4b67-adbb-660e3d9c51a4"
+            name="Wydawany_Tylko_Przez_Jednostki"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="18232231-99fa-472b-b5af-6cee0b1df590"
+                LastKnownName="bool"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2731,6 +3539,30 @@
                     <classMoniker
                       Id="8e675204-69f4-4e7c-a8e2-ce3c21183444"
                       LastKnownName="Centrala"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5b4d6123-2e6e-4e6e-9fed-4d8d3784163d"
+            name="PodajFormuleRozkazu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="980d21e9-3bf6-4d61-a8c4-18b2e560a032"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
                       LastKnownLocation="ModelingProject2.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3823,6 +4655,30 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
           </operation>
+          <operation
+            Id="7dd8b5b8-2753-4b6d-9bdc-7bcc15d1897a"
+            name="PodajFormuleRozkazu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60ec3a3b-9b45-49a8-b9b4-88656f28503c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -4057,6 +4913,30 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
           </operation>
+          <operation
+            Id="3c8fbd7d-c08f-4e3d-88ae-a8dfd598136c"
+            name="PodajFormuleRozkazu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1d486625-387e-4999-842a-f20807bc8f22"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -4290,6 +5170,30 @@
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="8fee3608-2ed3-4a7b-889e-4b93d512292e"
+            name="PodajFormuleRozkazu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="edf2c1c1-0383-4918-a9a4-3a1a30fb2107"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -4788,70 +5692,83 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="f6f7d3a9-71db-487a-a338-ca3ce6cea93b"
+            name="ParametryProduktu"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="46944d72-987d-48ad-8553-ff3b47939775"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="154cdb45-e927-41ae-9eba-eabb45a72f4d"
+            name="DocelowaBaza"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="46944d72-987d-48ad-8553-ff3b47939775"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="77c05814-e1da-4c71-bd1d-b92260e984bc"
-            name="Raportuj"
+            Id="7d8f0d4f-c12e-442d-b9a9-2c469db327bf"
+            name="R_Produkuj"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="a7cabc61-f1fa-4d92-9266-ef2a89e262b4"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="109590d2-018f-44d6-ab19-a73e9fc7066d">
-                    <propertyInstance
-                      Id="44b05e11-644e-460b-aea8-1d24a82e4da8"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="73202308-9870-429e-8d6e-2f7bf4eb252b">
-                    <propertyInstance
-                      Id="201128fb-2df0-4a01-9f7d-2ce873aa6f90"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ed57037d-5d15-4400-9540-8e10a4bbc693">
-                    <propertyInstance
-                      Id="655f56b3-6498-4fb4-9d58-720c81d5c175"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="984b8fd7-f42e-4001-a605-f77952b568b4">
-                    <propertyInstance
-                      Id="4fa7fb7c-aa9e-4abd-9ae2-588c17aed31c"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f3994cc6-3acc-4cd0-bac4-0a22f4013b39">
-                    <propertyInstance
-                      Id="30c9baab-f36d-4857-8572-9c5bd2bc8be2"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d42cf912-785d-457b-9890-3208e643f853">
-                    <propertyInstance
-                      Id="be43c687-abb3-4383-b7ae-c8be6d4dbf06"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="8630af29-07a7-4138-9f51-e0fcc71668c2"
-                  name="rezultat"
+                  Id="7bfa1233-5e7a-45b7-b93e-b98f56e88bfa"
+                  name="Callback"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dad17e2a-faba-48df-9d92-87c331711ac2"
+                      LastKnownName="Action&lt;string&gt;"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6059932e-4b8a-4f89-aff5-72ab32aac5ae"
+            name="Ustaw_Parametry_Rozkazu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f91479c-d4f9-459f-95ce-7bf478f19fbf"
+                  name="ParametryProduktu"
                   direction="In"
                   isUnique="false">
                   <type_NamedElement>
@@ -4862,66 +5779,56 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="812a354c-f75d-4b49-96f1-6dc82c68a58c"
+                  name="DocelowaBaza"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49fdfe0b-bb7d-4397-bc00-8eff9d81ce5e"
+                  name="CentralaZlecWykonanieRozkazu"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="7203162f-141f-4111-9a6c-45a08b4ac53c"
+                      LastKnownName="Action&lt;Abstrakcyjny_Rozkaz&gt;"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5a9bb41f-01a8-49ba-b4d4-a930b6f8d6e1"
+                  name="CentralaWytworzRozkaz"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="dca2fbef-3e71-44e0-bd7d-f6226afc3e24"
+                      LastKnownName="Func&lt;string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f98985ba-fdfb-434a-b1f1-a8af45e908d8"
+                  name="Abstrakcyjny_Rozkaz&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
             </ownedParameters>
-          </operation>
-          <operation
-            Id="ba26eacd-2449-43f9-a71b-36ad591240ff"
-            name="R_Produkuj"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="e9dffb55-13e0-4bf6-97db-488cc52520fd"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="17c708a4-83bf-4d91-9826-dac85c023f13">
-                    <propertyInstance
-                      Id="6ead26ad-55e9-4f97-afdf-1e66e45c7ad3"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="4863241c-bf9d-45c4-bafa-0a80399393f9">
-                    <propertyInstance
-                      Id="ca95fc40-a57c-4b92-bd3f-9940f1c54016"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="4c6797f6-47fc-4a87-b3d5-085c9c408b71">
-                    <propertyInstance
-                      Id="2918b50a-e52a-4514-bee2-b44861e17ba3"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="cc69ca85-0fc8-43ed-ac87-f379de86cb77">
-                    <propertyInstance
-                      Id="220c91e7-e103-44bc-8611-7b1e2b687400"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="728acf96-e552-4ed4-8807-5a639a6ff8d1">
-                    <propertyInstance
-                      Id="b0bd9b55-d538-4dbe-bca6-72d0c10ceeed"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="56cd732c-6364-43b5-b52c-0770bed994ed">
-                    <propertyInstance
-                      Id="05ea464a-7903-4e60-b373-9c9afdba0592"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -4976,6 +5883,26 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="72e06d96-ebfe-48da-bc0c-1b684f4ce926"
+            name="Nazwa"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="46944d72-987d-48ad-8553-ff3b47939775"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -5038,6 +5965,16 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5823ad7f-f62d-49c5-9597-f00900a7de1b"
+            name="Karabin"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -5100,12 +6037,22 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b5c07be0-9ec7-47ac-89cc-0c4114283372"
+            name="Czolg"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="5a0d5272-c7b8-4a6c-9175-dfe862b43ec5"
-        name="Zolniez"
+        name="Zolnierz"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -5162,6 +6109,16 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7d03bfba-de62-4472-a111-71ebe7075d1e"
+            name="Zolnierz"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -5224,6 +6181,16 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7655e729-9f7f-4d54-b7ae-fef872d73023"
+            name="Czolgista"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -5477,6 +6444,30 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
           </operation>
+          <operation
+            Id="71eccbc3-6015-4ea7-a689-4b1042e223e9"
+            name="PodajFormuleRozkazu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="55c33668-4d97-4bac-9074-1f37878b9171"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -5540,82 +6531,45 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
-        <ownedOperationsInternal>
-          <operation
-            Id="fe491211-f3a2-4dc2-a837-365f8e425efe"
-            name="Raportuj"
+        <ownedAttributesInternal>
+          <property
+            Id="ef8df731-22e0-4148-877b-caa254d3114a"
+            name="Zasob_Do_Dodania"
             isLeaf="false"
             isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="e9ad0d0d-1982-45a6-878e-5a8aaca7f46b"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5dc09301-463f-4a2b-bffa-3260d3238113">
-                    <propertyInstance
-                      Id="ad26c678-b072-4b72-949d-5d11e7cef20c"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="11ea4f40-b97c-40d7-b574-4c0af067204b">
-                    <propertyInstance
-                      Id="4f78f0e9-0028-4b40-84e1-729c5851fe4f"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="25e174ee-6d3d-49bb-8e4d-025d0a19820d">
-                    <propertyInstance
-                      Id="50359cc0-b42c-4d4b-b9c8-0bc43d60165a"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="94780437-2e11-419b-a50d-8771e629afd1">
-                    <propertyInstance
-                      Id="126afe11-02ef-4009-855b-6f805ef1c194"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f486f03d-ad5a-44c5-a53e-39b1e33d0912">
-                    <propertyInstance
-                      Id="00a156e1-f3bb-4b9a-ba9d-dbf66bf68063"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="bb0a9333-47b8-467b-b97d-9562dc0f3bdf">
-                    <propertyInstance
-                      Id="29078284-bd41-4336-90db-21e2358a9340"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a99fe9d3-cecf-4931-92d2-14f3c6b0c2d9"
-                  name="rezultat"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="46944d72-987d-48ad-8553-ff3b47939775"
-                      LastKnownName="string"
-                      LastKnownLocation="ModelingProject2.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="71d1366d-10ae-4d23-80eb-4010614513d8"
+                LastKnownName="Zasob_wojskowy"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7354c243-dcfd-43ad-9cb2-cca6dc2fb6a9"
+            name="DocelowaBaza"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="46944d72-987d-48ad-8553-ff3b47939775"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
           <operation
             Id="bef9dafa-d037-4c06-800b-e004b8ecd872"
             name="R_DodajZasobWojskowy"
@@ -5674,9 +6628,54 @@
                 </propertyInstances>
               </stereotypeInstance>
             </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3f0e59ea-9aa6-4f5d-8a51-2927a02d47c6"
+                  name="DocelowaBaza"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3c64ace0-a09e-4ab1-9e46-98f7572f51c1"
+                  name="Zasob_Do_Dodania"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="71d1366d-10ae-4d23-80eb-4010614513d8"
+                      LastKnownName="Zasob_wojskowy"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="18232231-99fa-472b-b5af-6cee0b1df590"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7203162f-141f-4111-9a6c-45a08b4ac53c"
+        name="Action&lt;Abstrakcyjny_Rozkaz&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="dca2fbef-3e71-44e0-bd7d-f6226afc3e24"
+        name="Func&lt;string" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

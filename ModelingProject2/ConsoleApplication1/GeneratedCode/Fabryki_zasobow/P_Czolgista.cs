@@ -44,7 +44,7 @@ public class P_Czolgista : Poligon
         }
     }
 
-    public Zasob_wojskowy MobilizujlCzolgiste(string Parametry_Czolgisty)
+    protected Zasob_wojskowy MobilizujlCzolgiste(string Parametry_Czolgisty)
     {
         return new Czolgista();
     }

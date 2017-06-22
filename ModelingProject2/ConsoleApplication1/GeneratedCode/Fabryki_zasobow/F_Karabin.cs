@@ -44,7 +44,7 @@ public class F_Karabin : Fabryka
         }
     }
 
-    public Zasob_wojskowy ProdukujKarabin(string Parametry_Czolgu)
+    public Zasob_wojskowy ProdukujKarabin(string Parametry_Karabinu)
     {
         return new Karabin();
 

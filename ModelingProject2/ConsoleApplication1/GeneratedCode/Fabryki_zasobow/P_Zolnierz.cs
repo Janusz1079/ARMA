@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class P_Zolniez : Poligon
+public class P_Zolnierz : Poligon
 {
     public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
     {
@@ -44,9 +44,9 @@ public class P_Zolniez : Poligon
         }
     }
 
-    public Zasob_wojskowy MobilizujZolnierza(string Parametry_Zolnierza)
+    protected Zasob_wojskowy MobilizujZolnierza(string Parametry_Zolnierza)
     {
-        return new Zolniez();
+        return new Zolnierz();
     }
 }
 

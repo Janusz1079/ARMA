@@ -9,9 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Zolniez : Zasob_wojskowy
+public class Zolnierz : Zasob_wojskowy
 {
-    public Zolniez()
+    public Zolnierz()
     {
         Nazwa = "Zolnierz";
     }

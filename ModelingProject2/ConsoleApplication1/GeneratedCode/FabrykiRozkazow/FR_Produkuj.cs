@@ -16,7 +16,7 @@ public class FR_Produkuj : Abstrakcyjna_Fabryka_Rozkazow
         string[] Parametry = ParametryRozkazu.Split('|');
         R_Produkuj Nowy_Rozkaz = new R_Produkuj(info.Odczytaj_Raport);
 
-        Nowy_Rozkaz.Ustaw_Parametry_Rozkazu(String.Join("|", Parametry.Skip(2).ToArray()), Parametry[1], info.ZlecWykonanieRozkazu, info.Wytworz_rozkaz_zlecony_przez_jednostke);
+        Nowy_Rozkaz.Ustaw_Parametry_Rozkazu(String.Join("|", Parametry.Skip(2).ToArray()), Parametry[1], info.Zlec_Wykonanie_Rozkazu_Jednostkom, info.Wytworz_rozkaz_zlecony_przez_jednostke);
         return Nowy_Rozkaz;
     }
 
