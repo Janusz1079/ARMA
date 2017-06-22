@@ -11,5 +11,9 @@ using System.Text;
 
 public class Karabin : Zasob_wojskowy
 {
+    public Karabin()
+    {
+        Nazwa = "Karabin";
+    }
 }
 

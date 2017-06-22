@@ -35,8 +35,8 @@ public class Abstrakcyjna_Jednostka
 
 	public virtual void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
 	{
-		throw new System.NotImplementedException();
-	}
+        this.NastepnikWykonaj(rozkaz);
+    }
 
     public virtual void NastepnikWykonaj(Abstrakcyjny_Rozkaz rozkaz)
     {

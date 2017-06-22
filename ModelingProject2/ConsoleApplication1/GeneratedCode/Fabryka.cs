@@ -19,7 +19,7 @@ public class Fabryka : Abstrakcyjna_Jednostka
 
     public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
     {
-        throw new System.NotImplementedException();
+        this.NastepnikWykonaj(rozkaz);
     }
 }
 
