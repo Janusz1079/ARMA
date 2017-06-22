@@ -16,7 +16,7 @@ public class R_Cwiczenia : Abstrakcyjny_Rozkaz
 		throw new System.NotImplementedException();
 	}
 
-	public R_Cwiczenia()
+	public R_Cwiczenia(Action<string> Callback)
 	{
 	}
 

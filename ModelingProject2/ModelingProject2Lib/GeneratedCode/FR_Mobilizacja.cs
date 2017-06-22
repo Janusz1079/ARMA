@@ -16,7 +16,11 @@ public class FR_Mobilizacja : Abstrakcyjna_Fabryka_Rozkazow
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void FR_Poligon()
+	public FR_Mobilizacja()
+	{
+	}
+
+	public override string PodajFormuleRozkazu()
 	{
 		throw new System.NotImplementedException();
 	}

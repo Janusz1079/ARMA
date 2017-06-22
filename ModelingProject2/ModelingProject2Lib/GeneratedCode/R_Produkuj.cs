@@ -11,13 +11,25 @@ using System.Text;
 
 public class R_Produkuj : Abstrakcyjny_Rozkaz
 {
-	public override void Raportuj(string rezultat)
+	public virtual string ParametryProduktu
 	{
-		throw new System.NotImplementedException();
+		get;
+		set;
 	}
 
-	public R_Produkuj()
+	public virtual string DocelowaBaza
 	{
+		get;
+		set;
+	}
+
+	public R_Produkuj(Action<string> Callback)
+	{
+	}
+
+	public virtual void Ustaw_Parametry_Rozkazu(string ParametryProduktu, string DocelowaBaza, Action<Abstrakcyjny_Rozkaz> CentralaZlecWykonanieRozkazu, Func<string , object > CentralaWytworzRozkaz)
+	{
+		throw new System.NotImplementedException();
 	}
 
 }

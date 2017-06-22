@@ -36,6 +36,11 @@ public class P_Czolgista : Poligon
                     this.NastepnikWykonaj(rozkaz);
                 }
             }
+            if (rozkaz.ID == 5) //Rozkaz zamelduj
+            {
+                rozkaz.Raportuj("Poligon Czolgistow, zglasza gotowosc");
+                this.NastepnikWykonaj(rozkaz);
+            }
 
         }
         else

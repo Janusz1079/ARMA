@@ -15,6 +15,7 @@ public class Fabryka : Abstrakcyjna_Jednostka
     {
         Lista_Rozkazow = new List<int>();
         Lista_Rozkazow.Add(4); // Rozkaz Produkuj
+        Lista_Rozkazow.Add(5); // Rozkaz Zamelduj
     }
 
     public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)

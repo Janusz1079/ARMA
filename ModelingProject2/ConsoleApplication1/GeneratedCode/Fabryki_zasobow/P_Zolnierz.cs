@@ -36,6 +36,11 @@ public class P_Zolnierz : Poligon
                     this.NastepnikWykonaj(rozkaz);
                 }
             }
+            if (rozkaz.ID == 5) //Rozkaz zamelduj
+            {
+                rozkaz.Raportuj("Poligon Zolnierzy, zglasza gotowosc");
+                this.NastepnikWykonaj(rozkaz);
+            }
 
         }
         else

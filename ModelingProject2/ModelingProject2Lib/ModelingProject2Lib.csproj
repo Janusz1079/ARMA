@@ -54,18 +54,20 @@
     <Compile Include="GeneratedCode\FR_DodajZasobWojskowy.cs" />
     <Compile Include="GeneratedCode\FR_Mobilizacja.cs" />
     <Compile Include="GeneratedCode\FR_Produkuj.cs" />
+    <Compile Include="GeneratedCode\FR_Zamelduj.cs" />
     <Compile Include="GeneratedCode\F_Czolg.cs" />
     <Compile Include="GeneratedCode\F_Karabin.cs" />
     <Compile Include="GeneratedCode\Karabin.cs" />
     <Compile Include="GeneratedCode\Poligon.cs" />
     <Compile Include="GeneratedCode\P_Czolgista.cs" />
-    <Compile Include="GeneratedCode\P_Zolniez.cs" />
+    <Compile Include="GeneratedCode\P_Zolnierz.cs" />
     <Compile Include="GeneratedCode\R_Cwiczenia.cs" />
     <Compile Include="GeneratedCode\R_DodajZasobWojskowy.cs" />
     <Compile Include="GeneratedCode\R_Mobilizacja.cs" />
     <Compile Include="GeneratedCode\R_Produkuj.cs" />
+    <Compile Include="GeneratedCode\R_Zamelduj.cs" />
     <Compile Include="GeneratedCode\Zasob_wojskowy.cs" />
-    <Compile Include="GeneratedCode\Zolniez.cs" />
+    <Compile Include="GeneratedCode\Zolnierz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,5 +11,14 @@ using System.Text;
 
 public class Poligon : Abstrakcyjna_Jednostka
 {
+	public Poligon()
+	{
+	}
+
+	public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

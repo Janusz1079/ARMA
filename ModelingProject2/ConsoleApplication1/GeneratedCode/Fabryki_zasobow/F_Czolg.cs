@@ -36,7 +36,13 @@ public class F_Czolg : Fabryka
                     this.NastepnikWykonaj(rozkaz);
                 }
             }
+            if (rozkaz.ID == 5) //Rozkaz zamelduj
+            {
+                rozkaz.Raportuj("Fabryka Czolgow, zglasza gotowosc");
+                this.NastepnikWykonaj(rozkaz);
+            }
             
+
         }
         else
         {

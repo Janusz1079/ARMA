@@ -11,25 +11,19 @@ using System.Text;
 
 public class Centrala
 {
-	private int Current_ID
-	{
-		get;
-		set;
-	}
-
 	public virtual Abstrakcyjna_Jednostka straznik_listy_jednostek
 	{
 		get;
 		set;
 	}
 
-	public virtual Abstrakcyjna_Fabryka_Rozkazow Lista_Fabryk_Rozkazow
+	public virtual IEnumerable<Abstrakcyjna_Fabryka_Rozkazow> Lista_Fabryk_Rozkazow
 	{
 		get;
 		set;
 	}
 
-	public virtual void Dodaj(string nazwa_obiektu)
+	public virtual void Dodaj(Abstrakcyjna_Jednostka Jednostka_Do_Dodania)
 	{
 		throw new System.NotImplementedException();
 	}
@@ -49,6 +43,21 @@ public class Centrala
 	}
 
 	public virtual void Odczytaj_Raport(string Raport)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Abstrakcyjny_Rozkaz Wytworz_rozkaz(string Tekst_Rozkazu)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual Abstrakcyjny_Rozkaz Wytworz_rozkaz_zlecony_przez_jednostke(string Tekst_Rozkazu)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public virtual void Zlec_Wykonanie_Rozkazu_Jednostkom(Abstrakcyjny_Rozkaz rozkaz)
 	{
 		throw new System.NotImplementedException();
 	}

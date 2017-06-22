@@ -17,7 +17,8 @@ public class B_Warszawa : Baza
         ListaZasobow = new List<Zasob_wojskowy>();
         Nazwa_Bazy = "Warszawa";
         Lista_Rozkazow.Add(1); //Rozkaz Cwiczenia
-        Lista_Rozkazow.Add(2); //Razkaz Dodaj Zasob Wojskowy 
+        Lista_Rozkazow.Add(2); //Razkaz Dodaj Zasob Wojskowy
+        Lista_Rozkazow.Add(5); // Rozkaz Zamelduj 
     }
 }
 

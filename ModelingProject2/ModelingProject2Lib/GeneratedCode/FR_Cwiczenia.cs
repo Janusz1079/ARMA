@@ -16,7 +16,11 @@ public class FR_Cwiczenia : Abstrakcyjna_Fabryka_Rozkazow
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void FR_Baza()
+	public FR_Cwiczenia()
+	{
+	}
+
+	public override string PodajFormuleRozkazu()
 	{
 		throw new System.NotImplementedException();
 	}

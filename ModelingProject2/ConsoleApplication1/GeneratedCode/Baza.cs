@@ -39,6 +39,17 @@ public class Baza : Abstrakcyjna_Jednostka
                     this.NastepnikWykonaj(rozkaz);
                 }
             }
+            if(rozkaz.ID == 5) // Rozkaz zamelduj
+            {
+                string DoZaraportowania = String.Format("Baza {0}, zglasza gotowosc\nLista Zasobow:", Nazwa_Bazy);
+                foreach(Zasob_wojskowy Zasob in ListaZasobow)
+                {
+                    DoZaraportowania = DoZaraportowania + "\n" + Zasob.Nazwa;
+                }
+                rozkaz.Raportuj(DoZaraportowania);
+                this.NastepnikWykonaj(rozkaz);
+            }
+
         }
         else
         {

@@ -11,5 +11,15 @@ using System.Text;
 
 public class F_Czolg : Fabryka
 {
+	public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	protected virtual Zasob_wojskowy ProdukujCzolg(string Parametry_Czolgu)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

@@ -11,5 +11,15 @@ using System.Text;
 
 public class F_Karabin : Fabryka
 {
+	public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	protected virtual Zasob_wojskowy ProdukujKarabin(string Parametry_Karabinu)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

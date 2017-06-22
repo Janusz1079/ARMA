@@ -11,5 +11,14 @@ using System.Text;
 
 public class Fabryka : Abstrakcyjna_Jednostka
 {
+	public Fabryka()
+	{
+	}
+
+	public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

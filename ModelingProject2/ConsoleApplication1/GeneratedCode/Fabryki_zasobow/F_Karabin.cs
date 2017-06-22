@@ -36,6 +36,11 @@ public class F_Karabin : Fabryka
                     this.NastepnikWykonaj(rozkaz);
                 }
             }
+            if (rozkaz.ID == 5) //Rozkaz zamelduj
+            {
+                rozkaz.Raportuj("Fabryka Karabinow, zglasza gotowosc");
+                this.NastepnikWykonaj(rozkaz);
+            }
 
         }
         else

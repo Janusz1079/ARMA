@@ -9,7 +9,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class P_Zolniez : Poligon
+public class Zolnierz : Zasob_wojskowy
 {
+	public Zolnierz()
+	{
+	}
+
 }
 

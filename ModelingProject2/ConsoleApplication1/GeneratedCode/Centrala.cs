@@ -38,6 +38,7 @@ public class Centrala
         Lista_Fabryk_Rozkazow.Add(new FR_Mobilizacja());
         Lista_Fabryk_Rozkazow.Add(new FR_Produkuj());
         Lista_Fabryk_Rozkazow.Add(new FR_DodajZasobWojskowy());
+        Lista_Fabryk_Rozkazow.Add(new FR_Zamelduj());
 
         this.Dodaj(new B_Warszawa());
         this.Dodaj(new B_Wroclaw());

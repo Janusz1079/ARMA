@@ -17,5 +17,20 @@ public class Baza : Abstrakcyjna_Jednostka
 		set;
 	}
 
+	public virtual string Nazwa_Bazy
+	{
+		get;
+		set;
+	}
+
+	public Baza()
+	{
+	}
+
+	public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

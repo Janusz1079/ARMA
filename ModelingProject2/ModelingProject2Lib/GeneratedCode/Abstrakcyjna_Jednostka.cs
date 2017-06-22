@@ -28,12 +28,21 @@ public class Abstrakcyjna_Jednostka
 		throw new System.NotImplementedException();
 	}
 
-	protected virtual void CzyWokonac(Abstrakcyjny_Rozkaz rozkaz)
+	public virtual void CzyWokonac(Abstrakcyjny_Rozkaz rozkaz)
 	{
 		throw new System.NotImplementedException();
 	}
 
 	public virtual void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public Abstrakcyjna_Jednostka()
+	{
+	}
+
+	protected virtual void NastepnikWykonaj(Abstrakcyjny_Rozkaz rozkaz)
 	{
 		throw new System.NotImplementedException();
 	}

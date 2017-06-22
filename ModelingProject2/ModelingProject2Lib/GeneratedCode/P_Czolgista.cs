@@ -11,5 +11,15 @@ using System.Text;
 
 public class P_Czolgista : Poligon
 {
+	public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+	{
+		throw new System.NotImplementedException();
+	}
+
+	protected virtual Zasob_wojskowy MobilizujCzolgiste(string Parametry_Czolgisty)
+	{
+		throw new System.NotImplementedException();
+	}
+
 }
 

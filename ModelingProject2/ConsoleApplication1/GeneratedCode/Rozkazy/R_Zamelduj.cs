@@ -9,20 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class FR_DodajZasobWojskowy : Abstrakcyjna_Fabryka_Rozkazow
+public class R_Zamelduj : Abstrakcyjny_Rozkaz
 {
-	public override Abstrakcyjny_Rozkaz TworzRozkaz(string parametr, Centrala info)
+	public R_Zamelduj(Action<string> Callback)
 	{
-		throw new System.NotImplementedException();
-	}
-
-	public FR_DodajZasobWojskowy()
-	{
-	}
-
-	public override string PodajFormuleRozkazu()
-	{
-		throw new System.NotImplementedException();
+        ID = 5;
+        this.Callback = Callback;
 	}
 
 }

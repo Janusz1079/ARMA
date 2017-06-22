@@ -11,5 +11,11 @@ using System.Text;
 
 public class Zasob_wojskowy
 {
+	public virtual string Nazwa
+	{
+		get;
+		set;
+	}
+
 }
 

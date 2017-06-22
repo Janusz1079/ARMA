@@ -9,18 +9,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class FR_DodajZasobWojskowy : Abstrakcyjna_Fabryka_Rozkazow
+public class P_Zolnierz : Poligon
 {
-	public override Abstrakcyjny_Rozkaz TworzRozkaz(string parametr, Centrala info)
+	public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public FR_DodajZasobWojskowy()
-	{
-	}
-
-	public override string PodajFormuleRozkazu()
+	protected virtual Zasob_wojskowy MobilizujZolnierza(string Parametry_Zolnierza)
 	{
 		throw new System.NotImplementedException();
 	}

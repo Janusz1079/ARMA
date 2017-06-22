@@ -9,7 +9,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Zolniez : Zasob_wojskowy
+public class R_Zamelduj : Abstrakcyjny_Rozkaz
 {
+	public R_Zamelduj(Action<string> Callback)
+	{
+	}
+
 }
 

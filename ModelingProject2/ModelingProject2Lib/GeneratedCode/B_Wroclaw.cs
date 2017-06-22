@@ -11,5 +11,9 @@ using System.Text;
 
 public class B_Wroclaw : Baza
 {
+	public B_Wroclaw()
+	{
+	}
+
 }
 

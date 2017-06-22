@@ -54,10 +54,12 @@
     <Compile Include="GeneratedCode\FabrykiRozkazow\FR_DodajZasobWojskowy.cs" />
     <Compile Include="GeneratedCode\FabrykiRozkazow\FR_Mobilizacja.cs" />
     <Compile Include="GeneratedCode\FabrykiRozkazow\FR_Produkuj.cs" />
+    <Compile Include="GeneratedCode\FabrykiRozkazow\FR_Zamelduj.cs" />
     <Compile Include="GeneratedCode\Rozkazy\R_Cwiczenia.cs" />
     <Compile Include="GeneratedCode\Rozkazy\R_DodajZasobWojskowy.cs" />
     <Compile Include="GeneratedCode\Rozkazy\R_Mobilizacja.cs" />
     <Compile Include="GeneratedCode\Rozkazy\R_Produkuj.cs" />
+    <Compile Include="GeneratedCode\Rozkazy\R_Zamelduj.cs" />
     <Compile Include="GeneratedCode\Zasoby_wojskowe\Czolg.cs" />
     <Compile Include="GeneratedCode\Zasoby_wojskowe\Czolgista.cs" />
     <Compile Include="GeneratedCode\Fabryka.cs" />

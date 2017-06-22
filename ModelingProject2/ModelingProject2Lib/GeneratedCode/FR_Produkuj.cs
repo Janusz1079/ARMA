@@ -16,7 +16,11 @@ public class FR_Produkuj : Abstrakcyjna_Fabryka_Rozkazow
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void FR_Fabryka()
+	public FR_Produkuj()
+	{
+	}
+
+	public override string PodajFormuleRozkazu()
 	{
 		throw new System.NotImplementedException();
 	}
