@@ -4307,6 +4307,83 @@
               LastKnownLocation="ModelingProject2.uml" />
           </generalization>
         </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="2bf41076-be95-4dc4-8987-23cbeca2c016"
+            name="DocelowaBaza"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="15f29db9-c087-4923-b960-923482292e75"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e5e26de-5340-4341-9b8c-4b4a77d5b966">
+                    <propertyInstance
+                      Id="70b1b3d4-8dc4-4b5b-96d7-e9b7ec0e35be"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d80b758-077a-49c9-99da-1a573ac20236">
+                    <propertyInstance
+                      Id="82d918b3-e9b9-4c14-b0ff-b2053f6677a5"
+                      name="Get"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86e41137-09c0-4b6b-8bae-1bb6d25e75d1">
+                    <propertyInstance
+                      Id="c7108de5-695e-4d67-b135-2335a183eb22"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5a6c651-01d6-4709-a102-ef5d4221cdcb">
+                    <propertyInstance
+                      Id="39ee4346-7d81-4d83-b6f3-eedcae2d67b9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23b55441-7e10-4945-84da-d0fb3bb47879">
+                    <propertyInstance
+                      Id="60c082b4-4843-4332-b284-3907518a8566"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18a417f0-d62e-4ee3-adc9-13a3fe6f0e63">
+                    <propertyInstance
+                      Id="4b6e1adf-2fef-47ea-8cd4-90db65f12e07"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d70e5011-635c-428a-8ddc-56878e11c01c">
+                    <propertyInstance
+                      Id="28b8f890-0d61-4dea-b9c7-e55bd80ec4bc"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="46944d72-987d-48ad-8553-ff3b47939775"
+                LastKnownName="string"
+                LastKnownLocation="ModelingProject2.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="144145b4-fa45-4a6c-adb7-fce9a3624058"
@@ -4452,6 +4529,31 @@
                     <undefinedTypeMoniker
                       Id="dad17e2a-faba-48df-9d92-87c331711ac2"
                       LastKnownName="Action&lt;string&gt;"
+                      LastKnownLocation="ModelingProject2.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9bb5725c-68d7-46a4-97d0-7519d260103b"
+            name="Ustaw_Baze_Docelowa"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6c433c5c-2d86-4c9a-ab3c-d2e4b662f2e5"
+                  name="Docelowa_Baza"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="46944d72-987d-48ad-8553-ff3b47939775"
+                      LastKnownName="string"
                       LastKnownLocation="ModelingProject2.uml" />
                   </type_NamedElement>
                 </parameter>

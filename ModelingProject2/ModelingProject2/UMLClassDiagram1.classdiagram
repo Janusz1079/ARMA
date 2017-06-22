@@ -3150,6 +3150,63 @@
             <elementDefinition Id="5bd04c4c-4810-4278-a0f2-c51cdc0b296f" />
           </generalization>
         </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="fe02c92a-8dbb-42df-8808-b4b277076ce6" name="DocelowaBaza" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="548e966c-0779-4aa8-bc49-885494907cb8" name="property" profile="CSharpProfile">
+                <elementDefinition Id="15f29db9-c087-4923-b960-923482292e75" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2964e056-6db5-4291-bbc3-b8d0482de588">
+                    <propertyInstance Id="169a2838-52d2-4aa5-9eb2-cad866ae3a06" name="ClrAttributes">
+                      <elementDefinition Id="70b1b3d4-8dc4-4b5b-96d7-e9b7ec0e35be" />
+                    </propertyInstance>
+                    <elementDefinition Id="1e5e26de-5340-4341-9b8c-4b4a77d5b966" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b515ca70-cb5e-4405-8bd7-490510eab937">
+                    <propertyInstance Id="b0dc2437-9959-4408-80b0-be86c05deb4b" name="Get" value="none">
+                      <elementDefinition Id="82d918b3-e9b9-4c14-b0ff-b2053f6677a5" />
+                    </propertyInstance>
+                    <elementDefinition Id="1d80b758-077a-49c9-99da-1a573ac20236" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e2c847e7-db2b-4bcb-be87-8d9c7fa3947b">
+                    <propertyInstance Id="b23356d9-cef7-4782-8ebe-807111aa46c3" name="HasBody" value="false">
+                      <elementDefinition Id="c7108de5-695e-4d67-b135-2335a183eb22" />
+                    </propertyInstance>
+                    <elementDefinition Id="86e41137-09c0-4b6b-8bae-1bb6d25e75d1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b53fcda3-478c-4bf5-a0ad-3c71be9b9f0b">
+                    <propertyInstance Id="65086b11-dbab-4e5b-8a37-ab84fbd675b6" name="IsUnsafe" value="false">
+                      <elementDefinition Id="39ee4346-7d81-4d83-b6f3-eedcae2d67b9" />
+                    </propertyInstance>
+                    <elementDefinition Id="d5a6c651-01d6-4709-a102-ef5d4221cdcb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ba80d476-1ec3-474e-b2a5-b8241787b2ac">
+                    <propertyInstance Id="d21f9914-07e4-4c57-8f9c-7be8f538f161" name="Inheritance" value="none">
+                      <elementDefinition Id="60c082b4-4843-4332-b284-3907518a8566" />
+                    </propertyInstance>
+                    <elementDefinition Id="23b55441-7e10-4945-84da-d0fb3bb47879" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="433ba56e-949a-4954-a0ad-650deb4708d8">
+                    <propertyInstance Id="e9229f8e-47b9-420a-8c51-e2059676aa2f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="4b6e1adf-2fef-47ea-8cd4-90db65f12e07" />
+                    </propertyInstance>
+                    <elementDefinition Id="18a417f0-d62e-4ee3-adc9-13a3fe6f0e63" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="be53af6f-1708-429e-afbb-fc458575facf">
+                    <propertyInstance Id="821a3a97-6f1c-4898-8261-c95d76b4dfd7" name="Set" value="none">
+                      <elementDefinition Id="28b8f890-0d61-4dea-b9c7-e55bd80ec4bc" />
+                    </propertyInstance>
+                    <elementDefinition Id="d70e5011-635c-428a-8ddc-56878e11c01c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2bf41076-be95-4dc4-8987-23cbeca2c016" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="921571f9-efbd-494e-a2db-9f62dde65c11" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="bcfcebe2-11be-4aad-914d-a5ba18b3c61e" name="Raportuj" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <appliedStereotypesInternal>
@@ -3258,6 +3315,19 @@
                   <elementDefinition Id="7e2afff9-2f25-43e6-a5e3-5950116b350e" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="cec0859d-7221-4007-8e01-c68417d66387" LastKnownName="Action&lt;string&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7e27322c-a1a4-4278-856c-8a4d5eaddad3" name="Ustaw_Baze_Docelowa" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9bb5725c-68d7-46a4-97d0-7519d260103b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8da59a24-a57c-4f72-b0bd-20403a2d114b" name="Docelowa_Baza" direction="In" isUnique="false">
+                  <elementDefinition Id="6c433c5c-2d86-4c9a-ab3c-d2e4b662f2e5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7be4e602-2088-484c-bc68-ba3837258a85" LastKnownName="string" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6075,6 +6145,11 @@
     <packageHasNamedElement>
       <referencedType Id="927807e6-075b-4365-a4b1-4967e54407ae" name="Func&lt;string,Abstrakcyjny_Rozkaz&gt;" isAbstract="false" isLeaf="false" cachedFullName="Func&lt;string,Abstrakcyjny_Rozkaz&gt;">
         <elementDefinition Id="0e45a3b8-f727-49a5-bd54-55f94cac7abf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="921571f9-efbd-494e-a2db-9f62dde65c11" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="46944d72-987d-48ad-8553-ff3b47939775" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

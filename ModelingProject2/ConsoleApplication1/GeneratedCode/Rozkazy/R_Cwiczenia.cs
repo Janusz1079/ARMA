@@ -11,10 +11,21 @@ using System.Text;
 
 public class R_Cwiczenia : Abstrakcyjny_Rozkaz
 {
-	public R_Cwiczenia(Action<string> Callback)
+    public virtual string DocelowaBaza
+    {
+        get;
+        set;
+    }
+
+    public R_Cwiczenia(Action<string> Callback)
 	{
         ID = 1;
         this.Callback = Callback;
+    }
+
+    public virtual void Ustaw_Baze_Docelowa(string Baza_Docelowa)
+    {
+        this.DocelowaBaza = Baza_Docelowa;
     }
 
 }

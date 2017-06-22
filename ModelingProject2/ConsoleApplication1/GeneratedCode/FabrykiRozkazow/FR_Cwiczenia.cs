@@ -11,9 +11,14 @@ using System.Text;
 
 public class FR_Cwiczenia : Abstrakcyjna_Fabryka_Rozkazow
 {
+
+
 	public override Abstrakcyjny_Rozkaz TworzRozkaz(string ParametryRozkazu, Centrala info)
 	{
-        return new R_Cwiczenia(info.Odczytaj_Raport);
+        string[] Parametry = ParametryRozkazu.Split('|');
+        R_Cwiczenia rozkaz = new R_Cwiczenia(info.Odczytaj_Raport);
+        rozkaz.Ustaw_Baze_Docelowa(Parametry[1]);
+        return rozkaz;
 	}
 
 	public FR_Cwiczenia()
@@ -24,7 +29,7 @@ public class FR_Cwiczenia : Abstrakcyjna_Fabryka_Rozkazow
 
     public override string PodajFormuleRozkazu()
     {
-        return "Cwiczenia\n";
+        return "cwiczenia|nazwa_bazy_docelowej\n";
     }
 
 }

@@ -47,7 +47,6 @@ public class R_Mobilizacja : Abstrakcyjny_Rozkaz
         this.CentralaWytworzRozkaz = CentralaWytworzRozkaz;
         this.CentralaZlecWykonanieRozkazu = CentralaZlecWykonanieRozkazu;
         this.DocelowaBaza = DocelowaBaza;
-
     }
 
 }

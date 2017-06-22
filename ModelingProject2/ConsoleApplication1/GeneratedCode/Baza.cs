@@ -26,6 +26,25 @@ public class Baza : Abstrakcyjna_Jednostka
     {
         if(this.CzyWokonac(rozkaz))
         {
+            if(rozkaz.ID == 1) // Cwiczenia
+            {
+                R_Cwiczenia RozkazZrzutowany = (R_Cwiczenia)rozkaz;
+                if (RozkazZrzutowany.DocelowaBaza == Nazwa_Bazy)
+                {
+                    string DoZaraportowania = String.Format("Baza {0}, przeprowadza cwiczenia\nLista Zasobow:", Nazwa_Bazy);
+                    foreach (Zasob_wojskowy Zasob in ListaZasobow)
+                    {
+                        DoZaraportowania = DoZaraportowania + "\n" + Zasob.Nazwa;
+                    }
+                    rozkaz.Raportuj(DoZaraportowania);
+                }
+                else
+                {
+                    this.NastepnikWykonaj(rozkaz);
+                }
+                
+            }
+
             if(rozkaz.ID == 2) // Dodanie Jednostki do bazy
             {
                 R_DodajZasobWojskowy RozkazZrzutowany = (R_DodajZasobWojskowy)rozkaz;
