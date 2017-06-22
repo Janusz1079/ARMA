@@ -35,15 +35,10 @@ public class R_Produkuj : Abstrakcyjny_Rozkaz
         set;
     }
 
-    public override void Raportuj(string rezultat)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public R_Produkuj()
-	{
+	public R_Produkuj(Action<string> Callback)
+    {
         ID = 4;
-
+        this.Callback = Callback;
     }
 
     public virtual void Ustaw_Parametry_Rozkazu(string ParametryProduktu, string DocelowaBaza, Action<Abstrakcyjny_Rozkaz> CentralaZlecWykonanieRozkazu, Func<string, Abstrakcyjny_Rozkaz> CentralaWytworzRozkaz)
@@ -52,7 +47,6 @@ public class R_Produkuj : Abstrakcyjny_Rozkaz
         this.CentralaWytworzRozkaz = CentralaWytworzRozkaz;
         this.CentralaZlecWykonanieRozkazu = CentralaZlecWykonanieRozkazu;
         this.DocelowaBaza = DocelowaBaza;
-
     }
 
 }

@@ -21,9 +21,11 @@ public class F_Karabin : Fabryka
 
                 string[] x = RozkazProdukcji.ParametryProduktu.Split('|');
 
-                if (RozkazProdukcji.ParametryProduktu.Split('|')[0] == "karabin") // Rozkaz produkcji czolgu
+                if (RozkazProdukcji.ParametryProduktu.Split('|')[0] == "karabin") // Rozkaz produkcji karabinu
                 {
                     Zasob_wojskowy Wyprodukowany = this.ProdukujKarabin(RozkazProdukcji.ParametryProduktu);
+                    rozkaz.Raportuj("Wyprodukowano karabin");
+
                     Abstrakcyjny_Rozkaz RozkazDodania = RozkazProdukcji.CentralaWytworzRozkaz("dodajzasob");
                     R_DodajZasobWojskowy RozkazDodaniaZrzutowany = (R_DodajZasobWojskowy)RozkazDodania;
                     RozkazDodaniaZrzutowany.Dolacz_Zasob(RozkazProdukcji.DocelowaBaza, Wyprodukowany);

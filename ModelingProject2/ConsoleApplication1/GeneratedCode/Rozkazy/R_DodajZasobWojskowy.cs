@@ -24,20 +24,16 @@ public class R_DodajZasobWojskowy : Abstrakcyjny_Rozkaz
     }
 
 
-	public R_DodajZasobWojskowy()
-	{
+	public R_DodajZasobWojskowy(Action<string> Callback)
+    {
         ID = 2;
-	}
+        this.Callback = Callback;
+    }
 
     public virtual void Dolacz_Zasob(string DocelowaBaza, Zasob_wojskowy Zasob_Do_Dodania)
     {
         this.Zasob_Do_Dodania = Zasob_Do_Dodania;
         this.DocelowaBaza = DocelowaBaza;
-    }
-
-    public virtual void UstawCallback(Action<string> Callback)
-    {
-        this.Callback = Callback;
     }
 }
 

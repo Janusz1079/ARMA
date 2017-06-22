@@ -11,10 +11,9 @@ using System.Text;
 
 public class FR_DodajZasobWojskowy : Abstrakcyjna_Fabryka_Rozkazow
 {
-	public override Abstrakcyjny_Rozkaz TworzRozkaz(string parametr, Centrala info)
+	public override Abstrakcyjny_Rozkaz TworzRozkaz(string ParametryRozkazu, Centrala info)
 	{
-        R_DodajZasobWojskowy rozkaz = new R_DodajZasobWojskowy();
-        rozkaz.UstawCallback(info.Odczytaj_Raport);
+        R_DodajZasobWojskowy rozkaz = new R_DodajZasobWojskowy(info.Odczytaj_Raport);
 
         return rozkaz;
 	}

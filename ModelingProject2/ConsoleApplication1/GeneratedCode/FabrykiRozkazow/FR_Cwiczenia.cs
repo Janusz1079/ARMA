@@ -11,9 +11,9 @@ using System.Text;
 
 public class FR_Cwiczenia : Abstrakcyjna_Fabryka_Rozkazow
 {
-	public override Abstrakcyjny_Rozkaz TworzRozkaz(string parametr, Centrala info)
+	public override Abstrakcyjny_Rozkaz TworzRozkaz(string ParametryRozkazu, Centrala info)
 	{
-        return new R_Cwiczenia();
+        return new R_Cwiczenia(info.Odczytaj_Raport);
 	}
 
 	public FR_Cwiczenia()

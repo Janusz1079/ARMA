@@ -16,5 +16,10 @@ public class Poligon : Abstrakcyjna_Jednostka
         Lista_Rozkazow = new List<int>();
         Lista_Rozkazow.Add(3); //Rozkaz Mobilizuj
     }
+
+    public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+    {
+        this.NastepnikWykonaj(rozkaz);
+    }
 }
 

@@ -28,5 +28,15 @@ public class Abstrakcyjny_Rozkaz
         Callback(rezultat);
 	}
 
+    public Abstrakcyjny_Rozkaz(Action<string> Callback)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public Abstrakcyjny_Rozkaz()
+    {
+      
+    }
+
 }
 

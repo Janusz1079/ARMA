@@ -17,7 +17,7 @@ public class Abstrakcyjna_Fabryka_Rozkazow
 		set;
 	}
 
-	public virtual Abstrakcyjny_Rozkaz TworzRozkaz(string parametr, Centrala info)
+	public virtual Abstrakcyjny_Rozkaz TworzRozkaz(string ParametryRozkazu, Centrala info)
 	{
 		throw new System.NotImplementedException();
 	}

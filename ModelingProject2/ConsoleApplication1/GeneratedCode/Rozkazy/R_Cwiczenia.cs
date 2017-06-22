@@ -11,15 +11,11 @@ using System.Text;
 
 public class R_Cwiczenia : Abstrakcyjny_Rozkaz
 {
-	public override void Raportuj(string rezultat)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public R_Cwiczenia()
+	public R_Cwiczenia(Action<string> Callback)
 	{
         ID = 1;
-	}
+        this.Callback = Callback;
+    }
 
 }
 

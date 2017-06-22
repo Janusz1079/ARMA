@@ -11,5 +11,42 @@ using System.Text;
 
 public class P_Czolgista : Poligon
 {
+    public override void Wykonaj(Abstrakcyjny_Rozkaz rozkaz)
+    {
+        if (this.CzyWokonac(rozkaz))
+        {
+            if (rozkaz.ID == 3) //Rozkaz mobilizacji
+            {
+                R_Mobilizacja RozkazProdukcji = (R_Mobilizacja)rozkaz;
+
+                string[] x = RozkazProdukcji.ParametryProduktu.Split('|');
+
+                if (RozkazProdukcji.ParametryProduktu.Split('|')[0] == "czolgista") // Rozkaz mobilizacji czolgisy
+                {
+                    Zasob_wojskowy Wyprodukowany = this.MobilizujlCzolgiste(RozkazProdukcji.ParametryProduktu);
+                    rozkaz.Raportuj("Wyszkolono Czolgiste");
+
+                    Abstrakcyjny_Rozkaz RozkazDodania = RozkazProdukcji.CentralaWytworzRozkaz("dodajzasob");
+                    R_DodajZasobWojskowy RozkazDodaniaZrzutowany = (R_DodajZasobWojskowy)RozkazDodania;
+                    RozkazDodaniaZrzutowany.Dolacz_Zasob(RozkazProdukcji.DocelowaBaza, Wyprodukowany);
+                    RozkazProdukcji.CentralaZlecWykonanieRozkazu((Abstrakcyjny_Rozkaz)RozkazDodaniaZrzutowany);
+                }
+                else
+                {
+                    this.NastepnikWykonaj(rozkaz);
+                }
+            }
+
+        }
+        else
+        {
+            this.NastepnikWykonaj(rozkaz);
+        }
+    }
+
+    public Zasob_wojskowy MobilizujlCzolgiste(string Parametry_Czolgisty)
+    {
+        return new Czolgista();
+    }
 }
 

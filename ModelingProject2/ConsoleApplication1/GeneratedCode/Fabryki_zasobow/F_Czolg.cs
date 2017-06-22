@@ -24,6 +24,8 @@ public class F_Czolg : Fabryka
                 if (RozkazProdukcji.ParametryProduktu.Split('|')[0] == "czolg") // Rozkaz produkcji czolgu
                 {
                     Zasob_wojskowy Wyprodukowany = this.ProdukujCzolg(RozkazProdukcji.ParametryProduktu);
+                    rozkaz.Raportuj("Wyprodukowano czolg");
+
                     Abstrakcyjny_Rozkaz RozkazDodania = RozkazProdukcji.CentralaWytworzRozkaz("dodajzasob");
                     R_DodajZasobWojskowy RozkazDodaniaZrzutowany = (R_DodajZasobWojskowy)RozkazDodania;
                     RozkazDodaniaZrzutowany.Dolacz_Zasob(RozkazProdukcji.DocelowaBaza, Wyprodukowany);

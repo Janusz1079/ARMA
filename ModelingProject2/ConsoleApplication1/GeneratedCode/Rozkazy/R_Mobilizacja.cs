@@ -11,15 +11,44 @@ using System.Text;
 
 public class R_Mobilizacja : Abstrakcyjny_Rozkaz
 {
-	public override void Raportuj(string rezultat)
-	{
-		throw new System.NotImplementedException();
-	}
+    public virtual string DocelowaBaza
+    {
+        get;
+        set;
+    }
 
-	public R_Mobilizacja()
-	{
+    public virtual string ParametryProduktu
+    {
+        get;
+        set;
+    }
+
+    public virtual Action<Abstrakcyjny_Rozkaz> CentralaZlecWykonanieRozkazu
+    {
+        get;
+        set;
+    }
+
+    public virtual Func<string, Abstrakcyjny_Rozkaz> CentralaWytworzRozkaz
+    {
+        get;
+        set;
+    }
+
+    public R_Mobilizacja(Action<string> Callback)
+    {
         ID = 3;
-	}
+        this.Callback = Callback;
+    }
+
+    public virtual void Ustaw_Parametry_Rozkazu(string ParametryProduktu, string DocelowaBaza, Action<Abstrakcyjny_Rozkaz> CentralaZlecWykonanieRozkazu, Func<string, Abstrakcyjny_Rozkaz> CentralaWytworzRozkaz)
+    {
+        this.ParametryProduktu = ParametryProduktu;
+        this.CentralaWytworzRozkaz = CentralaWytworzRozkaz;
+        this.CentralaZlecWykonanieRozkazu = CentralaZlecWykonanieRozkazu;
+        this.DocelowaBaza = DocelowaBaza;
+
+    }
 
 }
 

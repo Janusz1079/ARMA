@@ -11,10 +11,14 @@ using System.Text;
 
 public class FR_Mobilizacja : Abstrakcyjna_Fabryka_Rozkazow
 {
-	public override Abstrakcyjny_Rozkaz TworzRozkaz(string parametr, Centrala info)
+	public override Abstrakcyjny_Rozkaz TworzRozkaz(string ParametryRozkazu, Centrala info)
 	{
-		throw new System.NotImplementedException();
-	}
+        string[] Parametry = ParametryRozkazu.Split('|');
+        R_Mobilizacja Nowy_Rozkaz = new R_Mobilizacja(info.Odczytaj_Raport);
+
+        Nowy_Rozkaz.Ustaw_Parametry_Rozkazu(String.Join("|", Parametry.Skip(2).ToArray()), Parametry[1], info.ZlecWykonanieRozkazu, info.Wytworz_rozkaz);
+        return Nowy_Rozkaz;
+    }
 
 	public FR_Mobilizacja()
 	{
