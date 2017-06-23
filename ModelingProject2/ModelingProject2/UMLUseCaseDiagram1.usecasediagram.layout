@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.625, 8.5" name="UMLUseCaseDiagram1">
+  <useCaseModelRootMoniker Id="01b10628-a69d-43db-84e2-24cb73fadaff" />
+  <nestedChildShapes>
+    <actorShape Id="9fd8bfa0-1a2a-403f-abff-c6af2c8480fd" absoluteBounds="2, 3.25, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="caa9a186-5b0d-4b7c-a197-5e3540534953" LastKnownName="Centrala" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="a0a256e6-c7f1-48cf-ba52-5011bb132b8f" absoluteBounds="10.875, 0.75, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="3ffd65f2-0849-4f6f-afca-bcd08f9d5352" LastKnownName="Baza" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="813373f3-26f9-456a-9690-9b9deae80332" absoluteBounds="10.875, 2.875, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="a41fb0b8-2422-4448-8bc7-72b73dcfc80b" LastKnownName="Poligon" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="fc36169f-db0f-4cf2-92aa-0a51052eb89d" absoluteBounds="3, 0.5, 6.25, 6.125" customColor="White">
+      <subsystemMoniker Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" LastKnownName="WojskoPolskie" />
+    </SubsystemShape>
+  </nestedChildShapes>
+</useCaseDiagram>

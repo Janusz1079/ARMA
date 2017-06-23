@@ -53,6 +53,7 @@ public class Centrala
         Console.WriteLine(Raport);
     }
 
+    
     public virtual Abstrakcyjny_Rozkaz Wytworz_rozkaz(string Tekst_Rozkazu) //Metoda jest w stanie zlecic tylko te rozkazy kotore moga byc wydawane bez udzialu jednostek np dodaj_jednoskte nie moze byc zrealizowany bezposrednio przez centrale potrzebna jest fabryka jednostek
     {
         string[] ParametryRozkazu = Tekst_Rozkazu.Split('|');
@@ -95,17 +96,20 @@ public class Centrala
         }
     }
 
+    /* Funkcja przekazująca rozkaz do pierwszej jednostki */
     public virtual void Zlec_Wykonanie_Rozkazu_Jednostkom(Abstrakcyjny_Rozkaz rozkaz)
     {
         straznik_listy_jednostek.Wykonaj(rozkaz);
     }
 
+
+    /* Fukcja wyświetla liste rozkazów jakie mogą zostać wydane przez centrale ( użytkownika ).*/
     public virtual string Lista_Dostepnych_Rozkazow()
     {
         string ListaDostepnychRozkazow = "";
         foreach(Abstrakcyjna_Fabryka_Rozkazow Fabryka in Lista_Fabryk_Rozkazow)
         {
-            if(Fabryka.Wydawany_Tylko_Przez_Jednostki == false) // Metoda listuje tylko rozkazu zlecane bezposrenio przez centrale (uzytkownika)
+            if(Fabryka.Wydawany_Tylko_Przez_Jednostki == false) 
             {
                 ListaDostepnychRozkazow = ListaDostepnychRozkazow + Fabryka.PodajFormuleRozkazu();
             }
