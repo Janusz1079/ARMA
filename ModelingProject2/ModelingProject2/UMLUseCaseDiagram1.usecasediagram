@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="01b10628-a69d-43db-84e2-24cb73fadaff" name="UMLUseCaseDiagram1" linkedPackageId="a772cbc6-18b9-4d83-9682-96baa75e111a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="836ced23-ab73-483a-a64f-932f0f216112">
+      <elementDefinition Id="93ac644b-fa92-4270-896e-b6e6f87e3ff3" />
+      <body>Weryfikacja wrozkaców - czy dla bazy czy dla fabryki lub poligonu. </body>
+    </comment>
+  </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance Id="cbbf8717-2338-4459-9097-ddf5de890c3f" name="namespace" profile="CSharpProfile">
       <elementDefinition Id="938ca5b3-e195-4d49-8e51-11e06e32a178" />
@@ -101,9 +107,51 @@
         <ownedCommentsInternal>
           <comment Id="e3bf476b-9007-4f9c-a4c1-2bfdc43f5124">
             <elementDefinition Id="28d9f332-701d-4be7-9d0a-eee05e8369e6" />
-            <body>Weryfikacja wrozkaców - czy dla bazy czy dla fabryki lub poligonu. </body>
+            <body>Rozlożenie rozkazu w postaci tekstowej na części, wytworzenie rozkazu o odpowiednich parametrach i wydanie go.</body>
             <annotatedElements>
               <useCaseMoniker Id="eeca56da-1200-4548-b666-da344216ab49" LastKnownName="Wydaj rozkaz" />
+            </annotatedElements>
+          </comment>
+          <comment Id="8920994a-b469-4bea-80cd-966940c25a0c">
+            <elementDefinition Id="b192a291-e42d-4cd3-8ac2-f47305a49319" />
+            <body>Mobilizacja żołnierzy, rozkaz wykonowany tylko przez poligony, poligon weryfikuje czy jest w stanie zmbiizowac dany typ żołnierza.</body>
+            <annotatedElements>
+              <useCaseMoniker Id="13c1a81c-5699-48fc-9d55-543902ad0977" LastKnownName="Mobilizacja" />
+            </annotatedElements>
+          </comment>
+          <comment Id="a09ba673-e59b-4bda-bc75-6c903227f336">
+            <elementDefinition Id="9e5afc97-ab98-41a5-ab6f-57a2df6c7df7" />
+            <body>Rozkaz wydawany przez poligony, pozwala doadać zmobilizowanego żołnierza do określonej bazy.</body>
+            <annotatedElements>
+              <useCaseMoniker Id="052d8028-3df9-4fa2-ab87-389c0e8d6853" LastKnownName="Przenieś zołnierzy do bazy" />
+            </annotatedElements>
+          </comment>
+          <comment Id="bbe04d4f-7ab1-4ba2-afb4-d763b2ef2157">
+            <elementDefinition Id="ee3db2fb-d110-45fe-97b2-b18f0ea78392" />
+            <body>Rozkaz wydawany przez fabryki, pozwala doadać wyprodukowany zasob wojskowy do określonej bazy.</body>
+            <annotatedElements>
+              <useCaseMoniker Id="b7226a8d-cd08-4069-bae9-bff1e6771652" LastKnownName="Dodaj zasob do bazy" />
+            </annotatedElements>
+          </comment>
+          <comment Id="61823f2a-f9cf-4df1-b000-40a322bbf379">
+            <elementDefinition Id="31c3c4e0-4ea0-4875-871c-a57b6318e9cb" />
+            <body>Produkcja zasobów, rozkaz wykonowany tylko przez fabryki, fabryka weryfikuje czy jest w stanie wyprodukowac dany typ obiektu.</body>
+            <annotatedElements>
+              <useCaseMoniker Id="1442411e-4e99-42f5-aa98-2b28f7e5bfb8" LastKnownName="Produkuj zasoby" />
+            </annotatedElements>
+          </comment>
+          <comment Id="ca8853eb-521c-454d-82aa-334be4370431">
+            <elementDefinition Id="2b8140d2-2cb7-426f-aeb7-b5c60da56e25" />
+            <body>Wszystkie jednostki składają raport dotyczący ich statusu.</body>
+            <annotatedElements>
+              <useCaseMoniker Id="af8a25fd-17fc-4897-a78a-90047c23ab7c" LastKnownName="Melduj status" />
+            </annotatedElements>
+          </comment>
+          <comment Id="2e1dfd53-69e0-4454-bde5-d3934ce51069">
+            <elementDefinition Id="199e747a-cf41-4bf5-938d-26189b07e00f" />
+            <body>Konkretna baza zleca ćwiczenia, oraz składa raport co do swojej sytuacji.</body>
+            <annotatedElements>
+              <useCaseMoniker Id="2eab6270-2297-4274-8bd5-a4284a835e6e" LastKnownName="Ćwiczenia" />
             </annotatedElements>
           </comment>
         </ownedCommentsInternal>

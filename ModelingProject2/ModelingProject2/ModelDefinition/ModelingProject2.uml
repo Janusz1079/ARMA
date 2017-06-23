@@ -3,6 +3,72 @@
   dslVersion="1.0.0.0"
   Id="a8533ec5-084c-48aa-8a96-ba6bf41488dc"
   name="ModelingProject2" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="b192a291-e42d-4cd3-8ac2-f47305a49319">
+      <body>Mobilizacja żołnierzy, rozkaz wykonowany tylko przez poligony, poligon weryfikuje czy jest w stanie zmbiizowac dany typ żołnierza.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="95ee692e-112b-4af3-95e5-06d93cc880a7"
+          LastKnownName="Mobilizacja"
+          LastKnownLocation="ModelingProject2.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="93ac644b-fa92-4270-896e-b6e6f87e3ff3">
+      <body>Weryfikacja wrozkaców - czy dla bazy czy dla fabryki lub poligonu. </body>
+    </comment>
+    <comment
+      Id="9e5afc97-ab98-41a5-ab6f-57a2df6c7df7">
+      <body>Rozkaz wydawany przez poligony, pozwala doadać zmobilizowanego żołnierza do określonej bazy.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="fc326b1f-2983-4333-8d31-e52978382f71"
+          LastKnownName="Przenieś zołnierzy do bazy"
+          LastKnownLocation="ModelingProject2.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="ee3db2fb-d110-45fe-97b2-b18f0ea78392">
+      <body>Rozkaz wydawany przez fabryki, pozwala doadać wyprodukowany zasob wojskowy do określonej bazy.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="58e89947-4782-4c2a-849d-59a01f90d7f0"
+          LastKnownName="Dodaj zasob do bazy"
+          LastKnownLocation="ModelingProject2.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="31c3c4e0-4ea0-4875-871c-a57b6318e9cb">
+      <body>Produkcja zasobów, rozkaz wykonowany tylko przez fabryki, fabryka weryfikuje czy jest w stanie wyprodukowac dany typ obiektu.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="ba861425-a65d-464c-b459-8809ae095fa5"
+          LastKnownName="Produkuj zasoby"
+          LastKnownLocation="ModelingProject2.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="2b8140d2-2cb7-426f-aeb7-b5c60da56e25">
+      <body>Wszystkie jednostki składają raport dotyczący ich statusu.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="f28b6d5b-7727-4606-9c72-cdc2d326b70e"
+          LastKnownName="Melduj status"
+          LastKnownLocation="ModelingProject2.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="199e747a-cf41-4bf5-938d-26189b07e00f">
+      <body>Konkretna baza zleca ćwiczenia, oraz składa raport co do swojej sytuacji.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="d0ef4050-f679-4e7e-aadd-0fff92420b0b"
+          LastKnownName="Ćwiczenia"
+          LastKnownLocation="ModelingProject2.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
   <appliedStereotypesInternal>
     <stereotypeInstance
       Id="938ca5b3-e195-4d49-8e51-11e06e32a178"
@@ -9808,7 +9874,7 @@
         <ownedCommentsInternal>
           <comment
             Id="28d9f332-701d-4be7-9d0a-eee05e8369e6">
-            <body>Weryfikacja wrozkaców - czy dla bazy czy dla fabryki lub poligonu. </body>
+            <body>Rozlożenie rozkazu w postaci tekstowej na części, wytworzenie rozkazu o odpowiednich parametrach i wydanie go.</body>
             <annotatedElements>
               <useCaseMoniker
                 Id="8ecc549d-991e-4853-9cb9-d1377815901b"
