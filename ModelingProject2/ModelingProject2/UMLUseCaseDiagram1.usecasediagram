@@ -72,40 +72,41 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="017bd96b-0eaf-4070-88e4-8e8573e74c23">
-      <profileInstance Id="8878746c-896b-4d09-b612-9c56e4f08ab8" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="3b6453e8-8f07-4c9c-966f-c1dac3a18a63">
-      <profileInstance Id="14f3e9a4-76f7-4483-88aa-bb475ce7075c" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e0481683-460b-4b80-857a-817436e9eb95">
-      <profileInstance Id="3407060e-8967-4266-aa69-28583fc3f912" name="CSharpProfile">
-        <elementDefinition Id="47ba64f2-e01b-4542-8390-54097ec54a9a" />
-      </profileInstance>
-      <elementDefinition Id="37ea09ef-0e90-470f-a547-1ad2bdee777f" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="f36d3d3a-dd38-41c8-8b24-8010280c9ec2">
-      <profileInstance Id="aecce019-470c-4542-a903-efff5cadc6a2" name="TextTemplateBindings">
-        <elementDefinition Id="a078527b-cab4-451d-917e-bd3cc789c37b" />
-      </profileInstance>
-      <elementDefinition Id="ec40a36a-f09f-43e4-bc3b-8f7be67053a9" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="caa9a186-5b0d-4b7c-a197-5e3540534953" name="Centrala" isAbstract="false" isLeaf="false">
         <elementDefinition Id="3ad05fe0-934c-4e1e-8746-21efd7d721c8" />
+        <targetEnds>
+          <association Id="3ed11670-c241-4b95-867f-2757585fe4b4" isDerived="false" sourceEndRoleName="Centrala" targetEndRoleName="Wydaj rozkaz" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="eeca56da-1200-4548-b666-da344216ab49" LastKnownName="Wydaj rozkaz" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59691276-b629-4ca6-846d-3e6d70a2d0a6" name="Centrala" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3d3834e1-6dc6-4b73-8937-c4aa14827332" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="474e3640-386b-4943-9e38-2c33aa19e0c3" name="Wydaj rozkaz" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="45437383-7151-45fe-b0fe-7572137eba58" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="85b21292-e759-4c40-a756-fe56220845bb" />
+          </association>
+        </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <subsystem Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" name="WojskoPolskie" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="e3bf476b-9007-4f9c-a4c1-2bfdc43f5124">
+            <elementDefinition Id="28d9f332-701d-4be7-9d0a-eee05e8369e6" />
+            <body>Weryfikacja wrozkaców - czy dla bazy czy dla fabryki lub poligonu. </body>
+            <annotatedElements>
+              <useCaseMoniker Id="eeca56da-1200-4548-b666-da344216ab49" LastKnownName="Wydaj rozkaz" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
         <elementDefinition Id="fffb0ed3-de43-4a5c-82cf-c52982e33994" />
       </subsystem>
     </useCaseModelRootHasTypes>
@@ -117,10 +118,291 @@
     <useCaseModelRootHasTypes>
       <actor Id="a41fb0b8-2422-4448-8bc7-72b73dcfc80b" name="Poligon" isAbstract="false" isLeaf="false">
         <elementDefinition Id="60f7df24-acf7-498f-ad97-2860b7983abd" />
+        <targetEnds>
+          <association Id="2aca84c0-a0f3-4f0f-b800-c74e11bb3693" isDerived="false" sourceEndRoleName="Poligon" targetEndRoleName="Przenieś zołnierzy do bazy" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="052d8028-3df9-4fa2-ab87-389c0e8d6853" LastKnownName="Przenieś zołnierzy do bazy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="58e747b9-66cf-498e-a9d8-c7ed23df761b" name="Poligon" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2ad02cb3-a219-4462-98d8-fcb5181612c9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ecfc2fa-66ff-4518-864d-2426bce003ac" name="Przenieś zołnierzy do bazy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="133892b9-15fe-47a0-8714-b3ddbb4a02f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a37c4686-dab3-47b7-9132-80a03e51c15d" />
+          </association>
+        </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="eeca56da-1200-4548-b666-da344216ab49" name="Wydaj rozkaz" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8ecc549d-991e-4853-9cb9-d1377815901b" />
+        <suppliersInternal>
+          <dependency Id="fef016a1-531b-4e60-b096-c1dda8af482a">
+            <useCaseMoniker Id="13c1a81c-5699-48fc-9d55-543902ad0977" LastKnownName="Mobilizacja" />
+            <elementDefinition Id="87de0cfd-5e12-450d-ae4f-d571ea7c32cd" />
+          </dependency>
+          <dependency Id="a7a5bb01-96f5-4146-8342-3673970d50b0">
+            <useCaseMoniker Id="2eab6270-2297-4274-8bd5-a4284a835e6e" LastKnownName="Ćwiczenia" />
+            <elementDefinition Id="ae4920a8-867b-4894-9371-0662b27564af" />
+          </dependency>
+          <dependency Id="81b71f79-f1dd-4dd4-8a65-bc7e506f0e57">
+            <useCaseMoniker Id="af8a25fd-17fc-4897-a78a-90047c23ab7c" LastKnownName="Melduj status" />
+            <elementDefinition Id="6a7efd64-262d-4fe7-9f47-c68f471f19c1" />
+          </dependency>
+          <dependency Id="a8d3441d-11d0-4e93-aa73-18471da1a7b7">
+            <useCaseMoniker Id="1442411e-4e99-42f5-aa98-2b28f7e5bfb8" LastKnownName="Produkuj zasoby" />
+            <elementDefinition Id="a0eb1205-4436-4c5c-b07d-2cc987442ff8" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" LastKnownName="WojskoPolskie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="eeaea285-4091-40bf-a703-3dad297ca085" name="Fabryka" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b7d2e8e6-66cb-4381-b1f0-7e81eb830bad" />
+        <targetEnds>
+          <association Id="d22c1d9d-6fb1-406c-8f7b-726d6b10ce47" isDerived="false" sourceEndRoleName="Fabryka" targetEndRoleName="Dodaj zasob do bazy" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b7226a8d-cd08-4069-bae9-bff1e6771652" LastKnownName="Dodaj zasob do bazy" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad180438-25cb-4b67-a049-af5b84738053" name="Fabryka" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8537ab2d-21c0-49d5-aa5e-278097d1f9b3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea6e6957-5278-4caf-a2f9-ac5191ac7c32" name="Dodaj zasob do bazy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="63fdb8d3-041a-4c6e-ae0a-c986fe4671d6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="932a777f-e0d6-4830-9fbd-2090c006444b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="13c1a81c-5699-48fc-9d55-543902ad0977" name="Mobilizacja" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="95ee692e-112b-4af3-95e5-06d93cc880a7" />
+        <targetEnds>
+          <association Id="86d44117-c2d5-47b4-b756-3d8f63f66493" isDerived="false" sourceEndRoleName="Mobilizacja" targetEndRoleName="Poligon" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="a41fb0b8-2422-4448-8bc7-72b73dcfc80b" LastKnownName="Poligon" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="928e857f-dc5d-4e48-8e39-11e4142cf1cb" name="Mobilizacja" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7937cf58-00ca-4223-831c-c885fe278368" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a8a1799a-decf-4578-939b-95070d61542d" name="Poligon" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="68e3f967-6ce7-4531-bb44-393b434b2e24" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b0cdc36b-b006-4fd6-942c-3db8049ab688" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" LastKnownName="WojskoPolskie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1442411e-4e99-42f5-aa98-2b28f7e5bfb8" name="Produkuj zasoby" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ba861425-a65d-464c-b459-8809ae095fa5" />
+        <targetEnds>
+          <association Id="5f712228-0183-4e7d-a373-3703f9f081bb" isDerived="false" sourceEndRoleName="Produkuj zasoby" targetEndRoleName="Fabryka" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="eeaea285-4091-40bf-a703-3dad297ca085" LastKnownName="Fabryka" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9fee2ab5-a1d3-494a-bfe9-fb3bb33be1ed" name="Produkuj zasoby" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="40b9acee-5ca4-4e77-a1ff-d757ab00c6a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="280abe51-8b77-48c5-84f3-0e9163539c6b" name="Fabryka" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4cd8e009-fc79-4fa2-9156-084fbed3be89" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="13cca053-cca2-4964-9b1c-6fc2908e6ca0" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" LastKnownName="WojskoPolskie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="2eab6270-2297-4274-8bd5-a4284a835e6e" name="Ćwiczenia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d0ef4050-f679-4e7e-aadd-0fff92420b0b" />
+        <targetEnds>
+          <association Id="1ba71f57-35c6-4783-9a12-dce946267607" isDerived="false" sourceEndRoleName="Ćwiczenia" targetEndRoleName="Baza" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="3ffd65f2-0849-4f6f-afca-bcd08f9d5352" LastKnownName="Baza" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b921bdc-0b5a-48c5-94ca-4e736b4704a8" name="Ćwiczenia" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1451b285-63be-46c1-9e01-28f3de9c8f69" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4d4ccd88-2a9d-4997-a1ee-c63f402e325c" name="Baza" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b4de2f44-cd44-4a24-a596-ae2d97cf8d14" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2e43e914-0239-4dee-848f-cdfa5af307b8" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" LastKnownName="WojskoPolskie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="af8a25fd-17fc-4897-a78a-90047c23ab7c" name="Melduj status" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f28b6d5b-7727-4606-9c72-cdc2d326b70e" />
+        <targetEnds>
+          <association Id="b1b40434-cd0b-46a4-92df-8bcd3ed27ea7" isDerived="false" sourceEndRoleName="Melduj status" targetEndRoleName="Baza" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="3ffd65f2-0849-4f6f-afca-bcd08f9d5352" LastKnownName="Baza" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1df31709-6f7f-429f-a85c-3e2e39d8acf3" name="Melduj status" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="719c7a21-d338-4238-bf22-adcabc330ed7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="75ae849b-dea5-4907-9318-a03cbaf5c1b3" name="Baza" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b04f2773-9e34-4f58-a3a4-f566fd663dc6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="843557de-747f-48ba-a229-befad382e469" />
+          </association>
+          <association Id="508e828a-1b6f-4432-94cc-1fdf9d29f833" isDerived="false" sourceEndRoleName="Melduj status" targetEndRoleName="Poligon" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="a41fb0b8-2422-4448-8bc7-72b73dcfc80b" LastKnownName="Poligon" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ad5a1d3-0a90-44c0-8c98-b3a4d85fed4b" name="Melduj status" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c6a036e3-1982-4ab5-bdf4-7bc557c1be75" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83c28541-42d1-4f1a-b3d3-9a96a10b3fe3" name="Poligon" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6720774c-0309-42c3-9d17-f6a73e6b63b1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="427f441d-8f1a-4864-929f-c264e92da7b1" />
+          </association>
+          <association Id="9b553aa2-159d-4228-a83c-7b64c06ab3d2" isDerived="false" sourceEndRoleName="Melduj status" targetEndRoleName="Fabryka" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="eeaea285-4091-40bf-a703-3dad297ca085" LastKnownName="Fabryka" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6b7b7ca-b23d-4d2b-a376-a0eb2c6276cf" name="Melduj status" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9bbee0f8-0ebe-4487-8034-e1c184852e2f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7253dd47-d09d-4425-aef0-effa4d78f36b" name="Fabryka" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="98908703-8fb8-4c9c-857a-adaca66394f0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b5e1b03e-ca47-4708-ab18-715dcb72604e" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" LastKnownName="WojskoPolskie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b7226a8d-cd08-4069-bae9-bff1e6771652" name="Dodaj zasob do bazy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58e89947-4782-4c2a-849d-59a01f90d7f0" />
+        <targetEnds>
+          <association Id="b353f5c7-a8d1-4777-aa29-1eec8182b4b5" isDerived="false" sourceEndRoleName="Dodaj zasob do bazy" targetEndRoleName="Baza" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="3ffd65f2-0849-4f6f-afca-bcd08f9d5352" LastKnownName="Baza" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="209581d7-3689-41d3-8e74-69178ebc870a" name="Dodaj zasob do bazy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5f444c1d-ca13-4da5-ae96-8d80c2f23f08" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="38e279b2-d2a7-42c6-b5fa-2e5afa56a0bf" name="Baza" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="195442f2-3051-4017-8bee-9a1137d1feaf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b8f27e5e-9c98-40c3-879d-059b4294774c" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" LastKnownName="WojskoPolskie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="052d8028-3df9-4fa2-ab87-389c0e8d6853" name="Przenieś zołnierzy do bazy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fc326b1f-2983-4333-8d31-e52978382f71" />
+        <targetEnds>
+          <association Id="68fe339a-4c86-488c-b5be-54438a499c04" isDerived="false" sourceEndRoleName="Przenieś zołnierzy do bazy" targetEndRoleName="Baza" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="3ffd65f2-0849-4f6f-afca-bcd08f9d5352" LastKnownName="Baza" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="98c4281d-2354-4550-b388-ffa95c3e1e1b" name="Przenieś zołnierzy do bazy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e74ae474-b891-45fb-bb5f-1f194a561e7f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c3d292df-5896-4614-87f8-2b125affd850" name="Baza" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="239dd912-7453-4428-86f3-2c2799dfa1b3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="23d11d5c-8b2d-4785-a5fc-eb9179a8fd1e" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="6ef955c1-9f0a-4172-aeb6-580d73ed231c" LastKnownName="WojskoPolskie" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="a772cbc6-18b9-4d83-9682-96baa75e111a" name="ModelingProject2">
     <elementDefinition Id="a8533ec5-084c-48aa-8a96-ba6bf41488dc" />
+    <profileInstances>
+      <packageHasProfileInstances Id="017bd96b-0eaf-4070-88e4-8e8573e74c23">
+        <profileInstance Id="8878746c-896b-4d09-b612-9c56e4f08ab8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3b6453e8-8f07-4c9c-966f-c1dac3a18a63">
+        <profileInstance Id="14f3e9a4-76f7-4483-88aa-bb475ce7075c" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e0481683-460b-4b80-857a-817436e9eb95">
+        <profileInstance Id="3407060e-8967-4266-aa69-28583fc3f912" name="CSharpProfile">
+          <elementDefinition Id="47ba64f2-e01b-4542-8390-54097ec54a9a" />
+        </profileInstance>
+        <elementDefinition Id="37ea09ef-0e90-470f-a547-1ad2bdee777f" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f36d3d3a-dd38-41c8-8b24-8010280c9ec2">
+        <profileInstance Id="aecce019-470c-4542-a903-efff5cadc6a2" name="TextTemplateBindings">
+          <elementDefinition Id="a078527b-cab4-451d-917e-bd3cc789c37b" />
+        </profileInstance>
+        <elementDefinition Id="ec40a36a-f09f-43e4-bc3b-8f7be67053a9" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

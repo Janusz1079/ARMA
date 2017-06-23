@@ -9754,7 +9754,49 @@
         Id="3ad05fe0-934c-4e1e-8746-21efd7d721c8"
         name="Centrala"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="85b21292-e759-4c40-a756-fe56220845bb"
+            isDerived="false"
+            sourceEndRoleName="Centrala"
+            targetEndRoleName="Wydaj rozkaz"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8ecc549d-991e-4853-9cb9-d1377815901b"
+              LastKnownName="Wydaj rozkaz"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3d3834e1-6dc6-4b73-8937-c4aa14827332"
+                  name="Centrala"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="45437383-7151-45fe-b0fe-7572137eba58"
+                  name="Wydaj rozkaz"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <subsystem
@@ -9762,7 +9804,20 @@
         name="WojskoPolskie"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="28d9f332-701d-4be7-9d0a-eee05e8369e6">
+            <body>Weryfikacja wrozkaców - czy dla bazy czy dla fabryki lub poligonu. </body>
+            <annotatedElements>
+              <useCaseMoniker
+                Id="8ecc549d-991e-4853-9cb9-d1377815901b"
+                LastKnownName="Wydaj rozkaz"
+                LastKnownLocation="ModelingProject2.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+      </subsystem>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <actor
@@ -9776,7 +9831,550 @@
         Id="60f7df24-acf7-498f-ad97-2860b7983abd"
         name="Poligon"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a37c4686-dab3-47b7-9132-80a03e51c15d"
+            isDerived="false"
+            sourceEndRoleName="Poligon"
+            targetEndRoleName="Przenieś zołnierzy do bazy"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fc326b1f-2983-4333-8d31-e52978382f71"
+              LastKnownName="Przenieś zołnierzy do bazy"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ad02cb3-a219-4462-98d8-fcb5181612c9"
+                  name="Poligon"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="133892b9-15fe-47a0-8714-b3ddbb4a02f9"
+                  name="Przenieś zołnierzy do bazy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8ecc549d-991e-4853-9cb9-d1377815901b"
+        name="Wydaj rozkaz"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="87de0cfd-5e12-450d-ae4f-d571ea7c32cd">
+            <useCaseMoniker
+              Id="95ee692e-112b-4af3-95e5-06d93cc880a7"
+              LastKnownName="Mobilizacja"
+              LastKnownLocation="ModelingProject2.uml" />
+          </dependency>
+          <dependency
+            Id="ae4920a8-867b-4894-9371-0662b27564af">
+            <useCaseMoniker
+              Id="d0ef4050-f679-4e7e-aadd-0fff92420b0b"
+              LastKnownName="Ćwiczenia"
+              LastKnownLocation="ModelingProject2.uml" />
+          </dependency>
+          <dependency
+            Id="6a7efd64-262d-4fe7-9f47-c68f471f19c1">
+            <useCaseMoniker
+              Id="f28b6d5b-7727-4606-9c72-cdc2d326b70e"
+              LastKnownName="Melduj status"
+              LastKnownLocation="ModelingProject2.uml" />
+          </dependency>
+          <dependency
+            Id="a0eb1205-4436-4c5c-b07d-2cc987442ff8">
+            <useCaseMoniker
+              Id="ba861425-a65d-464c-b459-8809ae095fa5"
+              LastKnownName="Produkuj zasoby"
+              LastKnownLocation="ModelingProject2.uml" />
+          </dependency>
+        </suppliersInternal>
+        <subjects>
+          <subsystemMoniker
+            Id="fffb0ed3-de43-4a5c-82cf-c52982e33994"
+            LastKnownName="WojskoPolskie"
+            LastKnownLocation="ModelingProject2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b7d2e8e6-66cb-4381-b1f0-7e81eb830bad"
+        name="Fabryka"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="932a777f-e0d6-4830-9fbd-2090c006444b"
+            isDerived="false"
+            sourceEndRoleName="Fabryka"
+            targetEndRoleName="Dodaj zasob do bazy"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="58e89947-4782-4c2a-849d-59a01f90d7f0"
+              LastKnownName="Dodaj zasob do bazy"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8537ab2d-21c0-49d5-aa5e-278097d1f9b3"
+                  name="Fabryka"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="63fdb8d3-041a-4c6e-ae0a-c986fe4671d6"
+                  name="Dodaj zasob do bazy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="95ee692e-112b-4af3-95e5-06d93cc880a7"
+        name="Mobilizacja"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b0cdc36b-b006-4fd6-942c-3db8049ab688"
+            isDerived="false"
+            sourceEndRoleName="Mobilizacja"
+            targetEndRoleName="Poligon"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="60f7df24-acf7-498f-ad97-2860b7983abd"
+              LastKnownName="Poligon"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7937cf58-00ca-4223-831c-c885fe278368"
+                  name="Mobilizacja"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="68e3f967-6ce7-4531-bb44-393b434b2e24"
+                  name="Poligon"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="fffb0ed3-de43-4a5c-82cf-c52982e33994"
+            LastKnownName="WojskoPolskie"
+            LastKnownLocation="ModelingProject2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ba861425-a65d-464c-b459-8809ae095fa5"
+        name="Produkuj zasoby"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="13cca053-cca2-4964-9b1c-6fc2908e6ca0"
+            isDerived="false"
+            sourceEndRoleName="Produkuj zasoby"
+            targetEndRoleName="Fabryka"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="b7d2e8e6-66cb-4381-b1f0-7e81eb830bad"
+              LastKnownName="Fabryka"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="40b9acee-5ca4-4e77-a1ff-d757ab00c6a1"
+                  name="Produkuj zasoby"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4cd8e009-fc79-4fa2-9156-084fbed3be89"
+                  name="Fabryka"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="fffb0ed3-de43-4a5c-82cf-c52982e33994"
+            LastKnownName="WojskoPolskie"
+            LastKnownLocation="ModelingProject2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d0ef4050-f679-4e7e-aadd-0fff92420b0b"
+        name="Ćwiczenia"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="2e43e914-0239-4dee-848f-cdfa5af307b8"
+            isDerived="false"
+            sourceEndRoleName="Ćwiczenia"
+            targetEndRoleName="Baza"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="6d2f24ce-f1f9-4cb9-a166-98efc3f515b8"
+              LastKnownName="Baza"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1451b285-63be-46c1-9e01-28f3de9c8f69"
+                  name="Ćwiczenia"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4de2f44-cd44-4a24-a596-ae2d97cf8d14"
+                  name="Baza"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="fffb0ed3-de43-4a5c-82cf-c52982e33994"
+            LastKnownName="WojskoPolskie"
+            LastKnownLocation="ModelingProject2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f28b6d5b-7727-4606-9c72-cdc2d326b70e"
+        name="Melduj status"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="843557de-747f-48ba-a229-befad382e469"
+            isDerived="false"
+            sourceEndRoleName="Melduj status"
+            targetEndRoleName="Baza"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="6d2f24ce-f1f9-4cb9-a166-98efc3f515b8"
+              LastKnownName="Baza"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="719c7a21-d338-4238-bf22-adcabc330ed7"
+                  name="Melduj status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b04f2773-9e34-4f58-a3a4-f566fd663dc6"
+                  name="Baza"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="427f441d-8f1a-4864-929f-c264e92da7b1"
+            isDerived="false"
+            sourceEndRoleName="Melduj status"
+            targetEndRoleName="Poligon"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="60f7df24-acf7-498f-ad97-2860b7983abd"
+              LastKnownName="Poligon"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6a036e3-1982-4ab5-bdf4-7bc557c1be75"
+                  name="Melduj status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6720774c-0309-42c3-9d17-f6a73e6b63b1"
+                  name="Poligon"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b5e1b03e-ca47-4708-ab18-715dcb72604e"
+            isDerived="false"
+            sourceEndRoleName="Melduj status"
+            targetEndRoleName="Fabryka"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="b7d2e8e6-66cb-4381-b1f0-7e81eb830bad"
+              LastKnownName="Fabryka"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9bbee0f8-0ebe-4487-8034-e1c184852e2f"
+                  name="Melduj status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98908703-8fb8-4c9c-857a-adaca66394f0"
+                  name="Fabryka"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="fffb0ed3-de43-4a5c-82cf-c52982e33994"
+            LastKnownName="WojskoPolskie"
+            LastKnownLocation="ModelingProject2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="58e89947-4782-4c2a-849d-59a01f90d7f0"
+        name="Dodaj zasob do bazy"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b8f27e5e-9c98-40c3-879d-059b4294774c"
+            isDerived="false"
+            sourceEndRoleName="Dodaj zasob do bazy"
+            targetEndRoleName="Baza"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="6d2f24ce-f1f9-4cb9-a166-98efc3f515b8"
+              LastKnownName="Baza"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f444c1d-ca13-4da5-ae96-8d80c2f23f08"
+                  name="Dodaj zasob do bazy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="195442f2-3051-4017-8bee-9a1137d1feaf"
+                  name="Baza"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="fffb0ed3-de43-4a5c-82cf-c52982e33994"
+            LastKnownName="WojskoPolskie"
+            LastKnownLocation="ModelingProject2.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fc326b1f-2983-4333-8d31-e52978382f71"
+        name="Przenieś zołnierzy do bazy"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="23d11d5c-8b2d-4785-a5fc-eb9179a8fd1e"
+            isDerived="false"
+            sourceEndRoleName="Przenieś zołnierzy do bazy"
+            targetEndRoleName="Baza"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="6d2f24ce-f1f9-4cb9-a166-98efc3f515b8"
+              LastKnownName="Baza"
+              LastKnownLocation="ModelingProject2.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e74ae474-b891-45fb-bb5f-1f194a561e7f"
+                  name="Przenieś zołnierzy do bazy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="239dd912-7453-4428-86f3-2c2799dfa1b3"
+                  name="Baza"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker
+            Id="fffb0ed3-de43-4a5c-82cf-c52982e33994"
+            LastKnownName="WojskoPolskie"
+            LastKnownLocation="ModelingProject2.uml" />
+        </subjects>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

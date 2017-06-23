@@ -31,7 +31,7 @@ public class Baza : Abstrakcyjna_Jednostka
                 R_Cwiczenia RozkazZrzutowany = (R_Cwiczenia)rozkaz;
                 if (RozkazZrzutowany.DocelowaBaza == Nazwa_Bazy)
                 {
-                    string DoZaraportowania = String.Format("Baza {0}, przeprowadza cwiczenia\nLista Zasobow:", Nazwa_Bazy);
+                    string DoZaraportowania = String.Format("Baza {0}, przeprowadza cwiczenia\n\tLista Zasobow:", Nazwa_Bazy);
                     foreach (Zasob_wojskowy Zasob in ListaZasobow)
                     {
                         DoZaraportowania = DoZaraportowania + "\n" + Zasob.Nazwa;
@@ -60,7 +60,7 @@ public class Baza : Abstrakcyjna_Jednostka
             }
             if(rozkaz.ID == 5) // Rozkaz zamelduj
             {
-                string DoZaraportowania = String.Format("Baza {0}, zglasza gotowosc\nLista Zasobow:", Nazwa_Bazy);
+                string DoZaraportowania = String.Format("Baza {0}, zglasza gotowosc\n\tLista Zasobow:", Nazwa_Bazy);
                 foreach(Zasob_wojskowy Zasob in ListaZasobow)
                 {
                     DoZaraportowania = DoZaraportowania + "\n" + Zasob.Nazwa;

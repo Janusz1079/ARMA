@@ -10,3 +10,9 @@ C:\Users\TechMaster\Source\Repos\ARMA\ModelingProject2\ConsoleApplication1\bin\D
 C:\Users\TechMaster\Source\Repos\ARMA\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\TechMaster\Source\Repos\ARMA\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\TechMaster\Source\Repos\ARMA\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\GitHub\ARMA\ARMA\ModelingProject2\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\GitHub\ARMA\ARMA\ModelingProject2\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\GitHub\ARMA\ARMA\ModelingProject2\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+D:\GitHub\ARMA\ARMA\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+D:\GitHub\ARMA\ARMA\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\GitHub\ARMA\ARMA\ModelingProject2\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
